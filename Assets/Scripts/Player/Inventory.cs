@@ -24,6 +24,26 @@ public class Inventory : MonoBehaviour
 	public Equipment trinket2	= null;
 	public Equipment mainhand	= null;
 	public Equipment offhand	= null;
+
+	private Equipment currentHead = null;
+	private Equipment currentNeck = null;
+	private Equipment currentShoulder = null;
+	private Equipment currentBack = null;
+	private Equipment currentChest = null;
+	private Equipment currentShirt = null;
+	private Equipment currentTabard = null;
+	private Equipment currentWrist = null;
+	private Equipment currentHands = null;
+	private Equipment currentWaist = null;
+	private Equipment currentLegs = null;
+	private Equipment currentFeet = null;
+	private Equipment currentRing1 = null;
+	private Equipment currentRing2 = null;
+	private Equipment currentTrinket1 = null;
+	private Equipment currentTrinket2 = null;
+	private Equipment currentMainhand = null;
+	private Equipment currentOffhand = null;
+
 	[Header("Null Texture")]
 	public Texture2D alpha;
 	[Header("Layer Positions")]
@@ -53,20 +73,26 @@ public class Inventory : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		CheckLayers(chest);
+		ClothingLayers();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+		ClothingLayers();
     }
 
 	void ClothingLayers()
 	{
-		if (chest != null)
+		if (chest != currentChest)
 		{
 			CheckLayers(chest);
+			currentChest = chest;
+		}
+		if (legs != currentLegs)
+		{
+			CheckLayers(legs);
+			currentLegs = legs;
 		}
 	}
 
@@ -79,19 +105,39 @@ public class Inventory : MonoBehaviour
 				torsoLowerLayer.texture = item.layers[i].layerImageMale;
 			}
 			//else { torsoLowerLayer.texture = alpha; }
-			if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoUpperLayer)
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoUpperLayer)
 			{
 				torsoUpperLayer.texture = item.layers[i].layerImageMale;
 			}
 			//else { torsoUpperLayer.texture = alpha; }
-			if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveLowerLayer)
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveLowerLayer)
 			{
 				sleeveLowerLayer.texture = item.layers[i].layerImageMale;
 			}
 			//else { sleeveLowerLayer.texture = alpha; }
-			if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveUpperLayer)
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveUpperLayer)
 			{
 				sleeveUpperLayer.texture = item.layers[i].layerImageMale;
+			}
+			//else { sleeveUpperLayer.texture = alpha; }
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legLowerLayer)
+			{
+				legLowerLayer.texture = item.layers[i].layerImageMale;
+			}
+			//else { torsoLowerLayer.texture = alpha; }
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legUpperLayer)
+			{
+				legUpperLayer.texture = item.layers[i].layerImageMale;
+			}
+			//else { torsoUpperLayer.texture = alpha; }
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBeltLayer)
+			{
+				legBeltLayer.texture = item.layers[i].layerImageMale;
+			}
+			//else { sleeveLowerLayer.texture = alpha; }
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBootLayer)
+			{
+				legBootLayer.texture = item.layers[i].layerImageMale;
 			}
 			//else { sleeveUpperLayer.texture = alpha; }
 		}
