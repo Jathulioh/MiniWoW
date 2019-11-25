@@ -1,0 +1,6 @@
+newmtl elwynntreecanopy_leaves01
+illum 1
+map_Kd elwynntreecanopy_leaves01.png
+newmtl elwynntreecanopy_base02
+illum 1
+map_Kd elwynntreecanopy_base02.png

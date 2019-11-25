@@ -1,0 +1,3 @@
+newmtl globe01
+illum 1
+map_Kd globe01.png

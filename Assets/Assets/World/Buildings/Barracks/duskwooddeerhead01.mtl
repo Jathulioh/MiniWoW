@@ -1,0 +1,6 @@
+newmtl deerhead01
+illum 1
+map_Kd deerhead01.png
+newmtl duskwoodfurniture01
+illum 1
+map_Kd duskwoodfurniture01.png

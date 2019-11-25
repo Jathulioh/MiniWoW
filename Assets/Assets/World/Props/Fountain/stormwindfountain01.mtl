@@ -1,0 +1,12 @@
+newmtl stormwindlady_1
+illum 1
+map_Kd stormwindlady_1.png
+newmtl sm_crusadersoldier
+illum 1
+map_Kd sm_crusadersoldier.png
+newmtl stormwindfountianbase
+illum 1
+map_Kd stormwindfountianbase.png
+newmtl stormwindfountian_inside
+illum 1
+map_Kd stormwindfountian_inside.png

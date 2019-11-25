@@ -1,0 +1,6 @@
+newmtl elwynntreefirtop
+illum 1
+map_Kd elwynntreefirtop.png
+newmtl elwynntreetallcomp_01
+illum 1
+map_Kd elwynntreetallcomp_01.png

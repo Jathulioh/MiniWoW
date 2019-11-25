@@ -1,0 +1,6 @@
+newmtl mm_pole_01
+illum 1
+map_Kd mm_pole_01.png
+newmtl mm_strmwnd_jail_trim_01
+illum 1
+map_Kd mm_strmwnd_jail_trim_01.png

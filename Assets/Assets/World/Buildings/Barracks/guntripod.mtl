@@ -1,0 +1,6 @@
+newmtl gunshop
+illum 1
+map_Kd gunshop.png
+newmtl dwarvenrifle01
+illum 1
+map_Kd dwarvenrifle01.png

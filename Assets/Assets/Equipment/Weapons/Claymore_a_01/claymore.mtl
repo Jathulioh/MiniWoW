@@ -1,0 +1,20 @@
+#
+# mtl file for claymore.obj obj file
+#
+
+newmtl item/objectcomponents/weapon/sword_2h_claymore_a_01.m2_Geoset_000
+illum 2
+Kd 1.000000 1.000000 1.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd claymore_sword_1h_scimitar_a_02_v01.png
+newmtl item/objectcomponents/weapon/sword_2h_claymore_a_01.m2_Geoset_000
+illum 2
+Kd 1.000000 1.000000 1.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd claymore_sword_1h_scimitar_a_02_v01.png

@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: f246f60d622c82b4e9e4652f06bbda21
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 0
+    100002: 1
+    100004: 10
+    100006: 11
+    100008: 12
+    100010: 13
+    100012: 14
+    100014: 15
+    100016: 16
+    100018: 17
+    100020: 18
+    100022: 19
+    100024: 2
+    100026: 20
+    100028: 21
+    100030: 22
+    100032: 23
+    100034: 24
+    100036: 25
+    100038: 26
+    100040: 27
+    100042: 28
+    100044: 29
+    100046: 3
+    100048: 30
+    100050: 31
+    100052: 32
+    100054: 33
+    100056: 34
+    100058: 35
+    100060: 36
+    100062: 4
+    100064: 5
+    100066: 6
+    100068: 7
+    100070: 8
+    100072: 9
+    100074: //RootNode
+    400000: 0
+    400002: 1
+    400004: 10
+    400006: 11
+    400008: 12
+    400010: 13
+    400012: 14
+    400014: 15
+    400016: 16
+    400018: 17
+    400020: 18
+    400022: 19
+    400024: 2
+    400026: 20
+    400028: 21
+    400030: 22
+    400032: 23
+    400034: 24
+    400036: 25
+    400038: 26
+    400040: 27
+    400042: 28
+    400044: 29
+    400046: 3
+    400048: 30
+    400050: 31
+    400052: 32
+    400054: 33
+    400056: 34
+    400058: 35
+    400060: 36
+    400062: 4
+    400064: 5
+    400066: 6
+    400068: 7
+    400070: 8
+    400072: 9
+    400074: //RootNode
+    2100000: mm_strmwnd__throne_trim_01
+    2100002: tournament_banner_human01
+    2100004: ui_lampmetal_01
+    2100006: bm_brspire_trims09
+    2100008: elwynntreecanopy_leaves01
+    2100010: stormwind_wall
+    2100012: ui_troll_sunglare
+    2100014: maelstrom_lightrays
+    2100016: mm_strmwnd_int_floor_02
+    2100018: mm_cathy_floor_01
+    2100020: mm_strmwnd_throne_arch_01
+    2100022: glow32
+    2100024: ui_cwindows_01
+    2100026: mm_strmwnd_throne_ceiling_01
+    2100028: mm_browndoor_01
+    2100030: ui_shadow_large
+    2100032: bench02
+    2100034: ui_wall_ionic
+    2100036: ui_column_flat_middle_nosnow
+    2100038: danathshoulder
+    2100040: danath03
+    2100042: lightglass02
+    2100044: large_window_01
+    2100046: mm_strmwnd_throne_wall_01
+    2100048: background_01
+    2100050: ui_fog
+    2100052: mm_strmwnd_throne_pillar_01
+    2100054: ui_background_sky_01
+    2100056: gradient5circle
+    2100058: hanginglantern01
+    2100060: scholomancecandleoff01
+    2100062: ui_shadow
+    2100064: candleflameorange
+    2100066: glowwhite32
+    2100068: scholomancecandle01
+    2300000: 0
+    2300002: 1
+    2300004: 10
+    2300006: 11
+    2300008: 12
+    2300010: 13
+    2300012: 14
+    2300014: 15
+    2300016: 16
+    2300018: 17
+    2300020: 18
+    2300022: 19
+    2300024: 2
+    2300026: 20
+    2300028: 21
+    2300030: 22
+    2300032: 23
+    2300034: 24
+    2300036: 25
+    2300038: 26
+    2300040: 27
+    2300042: 28
+    2300044: 29
+    2300046: 3
+    2300048: 30
+    2300050: 31
+    2300052: 32
+    2300054: 33
+    2300056: 34
+    2300058: 35
+    2300060: 36
+    2300062: 4
+    2300064: 5
+    2300066: 6
+    2300068: 7
+    2300070: 8
+    2300072: 9
+    3300000: 0
+    3300002: 1
+    3300004: 10
+    3300006: 11
+    3300008: 12
+    3300010: 13
+    3300012: 14
+    3300014: 15
+    3300016: 16
+    3300018: 17
+    3300020: 18
+    3300022: 19
+    3300024: 2
+    3300026: 20
+    3300028: 21
+    3300030: 22
+    3300032: 23
+    3300034: 24
+    3300036: 25
+    3300038: 26
+    3300040: 27
+    3300042: 28
+    3300044: 29
+    3300046: 3
+    3300048: 30
+    3300050: 31
+    3300052: 32
+    3300054: 33
+    3300056: 34
+    3300058: 35
+    3300060: 36
+    3300062: 4
+    3300064: 5
+    3300066: 6
+    3300068: 7
+    3300070: 8
+    3300072: 9
+    4300000: 0
+    4300002: 1
+    4300004: 10
+    4300006: 11
+    4300008: 12
+    4300010: 13
+    4300012: 14
+    4300014: 15
+    4300016: 16
+    4300018: 17
+    4300020: 18
+    4300022: 19
+    4300024: 2
+    4300026: 20
+    4300028: 21
+    4300030: 22
+    4300032: 23
+    4300034: 24
+    4300036: 25
+    4300038: 26
+    4300040: 27
+    4300042: 28
+    4300044: 29
+    4300046: 3
+    4300048: 30
+    4300050: 31
+    4300052: 32
+    4300054: 33
+    4300056: 34
+    4300058: 35
+    4300060: 36
+    4300062: 4
+    4300064: 5
+    4300066: 6
+    4300068: 7
+    4300070: 8
+    4300072: 9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: background_01
+    second: {fileID: 2100000, guid: 579019e2bac35e345bed354eb19fc149, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bench02
+    second: {fileID: 2100000, guid: 9f08d940b737b184d84c11bf343f4f2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bm_brspire_trims09
+    second: {fileID: 2100000, guid: 64ab11056677dfc45aaf4af28bdcd939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: candleflameorange
+    second: {fileID: 2100000, guid: 6e243e281e23d804794cc8d21aa48a47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: danath03
+    second: {fileID: 2100000, guid: 3010befb6064d8443b86c71dc4537a03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: danathshoulder
+    second: {fileID: 2100000, guid: 447d3cb5ffd8c7b458afbfe7755c0694, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elwynntreecanopy_leaves01
+    second: {fileID: 2100000, guid: 135713b4fcc7e25468e4e8bcce5244cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glow32
+    second: {fileID: 2100000, guid: 7ff54f80487778b43bd8c95733f193ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glowwhite32
+    second: {fileID: 2100000, guid: 6c4e5d2ade5c6a948aa17d8e177ceae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gradient5circle
+    second: {fileID: 2100000, guid: 081d603a955a7ac4084e19b83981d4e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hanginglantern01
+    second: {fileID: 2100000, guid: f6063d6eeb39d614aad93b8410bceef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: large_window_01
+    second: {fileID: 2100000, guid: 76ae5502f4afb5b4a97a15451aacdce3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightglass02
+    second: {fileID: 2100000, guid: c5fa30ef5f6c2504095a6f8423e56b98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: maelstrom_lightrays
+    second: {fileID: 2100000, guid: d2d5c1a410cb6434aa2c3379c9ef50a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_browndoor_01
+    second: {fileID: 2100000, guid: 9512f53447d0c704597ac9452a89ceeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_cathy_floor_01
+    second: {fileID: 2100000, guid: fa29de40ab514934ab6fea935353a033, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd__throne_trim_01
+    second: {fileID: 2100000, guid: 0101f316dcc73bd439955c3206652b11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd_int_floor_02
+    second: {fileID: 2100000, guid: 5f199048262100b4396bfa69b3bb0f8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd_throne_arch_01
+    second: {fileID: 2100000, guid: 60dfd275cfa24564e92cc04193814c29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd_throne_ceiling_01
+    second: {fileID: 2100000, guid: b84dbe6f66789874e8a644f4eee30289, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd_throne_pillar_01
+    second: {fileID: 2100000, guid: 7c6d0f36f2908df4aaaa9590c1569303, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mm_strmwnd_throne_wall_01
+    second: {fileID: 2100000, guid: 005f059659c6a8d4cb0068251adaf749, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scholomancecandle01
+    second: {fileID: 2100000, guid: 63dd3af8bab4c134fba5523377445da1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scholomancecandleoff01
+    second: {fileID: 2100000, guid: c9846156d95955c4088ce2d757795de9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stormwind_wall
+    second: {fileID: 2100000, guid: 838ce9fab8706f5488d3204a3002aa94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tournament_banner_human01
+    second: {fileID: 2100000, guid: ded1a8750dfb9f64ba1c3f9e9a782588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_background_sky_01
+    second: {fileID: 2100000, guid: a85471d1cab1222488b6278ee2e0984e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_column_flat_middle_nosnow
+    second: {fileID: 2100000, guid: 5030141ab5ab06e4ca48a210a134dc14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_cwindows_01
+    second: {fileID: 2100000, guid: 00249146c9126664697d5bf0ad5a1d08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_fog
+    second: {fileID: 2100000, guid: 9dc0f94e8902cff4c945b5ac2d133e63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_lampmetal_01
+    second: {fileID: 2100000, guid: 4bc3af409f088584f82fdcf4689329b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_shadow
+    second: {fileID: 2100000, guid: 4972395e5655a094c971a766f4f7d82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_shadow_large
+    second: {fileID: 2100000, guid: 5a055f017e43c9b4c84f1d3e7ff4839d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_troll_sunglare
+    second: {fileID: 2100000, guid: 5fd3e4b254d5f764c8abb36abde4233d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ui_wall_ionic
+    second: {fileID: 2100000, guid: 09fcc6816f074194fb2d5291beb85ed5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

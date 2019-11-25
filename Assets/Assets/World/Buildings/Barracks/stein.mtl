@@ -1,0 +1,9 @@
+newmtl deadmineslanternmount02
+illum 1
+map_Kd deadmineslanternmount02.png
+newmtl deadminesstein02
+illum 1
+map_Kd deadminesstein02.png
+newmtl deadminesstein01
+illum 1
+map_Kd deadminesstein01.png

@@ -1,0 +1,9 @@
+newmtl ui_characterselecttex
+illum 1
+map_Kd ui_characterselecttex.png
+newmtl ui_characterselectalphas
+illum 1
+map_Kd ui_characterselectalphas.png
+newmtl ui_charactersclouds
+illum 1
+map_Kd ui_charactersclouds.png

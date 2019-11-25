@@ -1,0 +1,6 @@
+newmtl roastboarskin
+illum 1
+map_Kd roastboarskin.png
+newmtl jewelleddining
+illum 1
+map_Kd jewelleddining.png

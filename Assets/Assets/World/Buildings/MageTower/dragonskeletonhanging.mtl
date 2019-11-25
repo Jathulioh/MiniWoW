@@ -1,0 +1,6 @@
+newmtl dragonbone
+illum 1
+map_Kd dragonbone.png
+newmtl hanginglantern01
+illum 1
+map_Kd hanginglantern01.png

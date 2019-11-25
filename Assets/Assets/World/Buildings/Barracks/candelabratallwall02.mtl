@@ -1,0 +1,12 @@
+newmtl flame01
+illum 1
+map_Kd flame01.png
+newmtl glow
+illum 1
+map_Kd glow.png
+newmtl candelabratallwall02
+illum 1
+map_Kd candelabratallwall02.png
+newmtl armorreflect_hard_orange
+illum 1
+map_Kd armorreflect_hard_orange.png

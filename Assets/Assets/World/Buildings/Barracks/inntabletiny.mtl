@@ -1,0 +1,3 @@
+newmtl mm_beam_side__01x
+illum 1
+map_Kd mm_beam_side__01x.png

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dacd437ecc94ca44290b34d76c41f4eb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Morpheus
+  fontNames:
+  - Morpheus
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 29b830e2cee330c42a2d9452706d192f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

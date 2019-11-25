@@ -1,0 +1,12 @@
+newmtl ironmaiden-1
+illum 1
+map_Kd ironmaiden-1.png
+newmtl lavalump2
+illum 1
+map_Kd lavalump2.png
+newmtl wood03
+illum 1
+map_Kd wood03.png
+newmtl flamelicksmall
+illum 1
+map_Kd flamelicksmall.png

@@ -1,0 +1,9 @@
+newmtl bm_shdwfng_table_01
+illum 1
+map_Kd bm_shdwfng_table_01.png
+newmtl bm_shdwfang_woodplanks_01
+illum 1
+map_Kd bm_shdwfang_woodplanks_01.png
+newmtl bm_shdwfang_outerwall_03
+illum 1
+map_Kd bm_shdwfang_outerwall_03.png

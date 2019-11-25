@@ -1,0 +1,9 @@
+newmtl elwynndocksupport01
+illum 1
+map_Kd elwynndocksupport01.png
+newmtl polearm_2h_bladed_b_01black
+illum 1
+map_Kd polearm_2h_bladed_b_01black.png
+newmtl armorreflect3
+illum 1
+map_Kd armorreflect3.png

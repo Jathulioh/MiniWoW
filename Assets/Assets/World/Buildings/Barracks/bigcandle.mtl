@@ -1,0 +1,15 @@
+newmtl skull01
+illum 1
+map_Kd skull01.png
+newmtl flamelicksmallblue
+illum 1
+map_Kd flamelicksmallblue.png
+newmtl candle
+illum 1
+map_Kd candle.png
+newmtl glow32
+illum 1
+map_Kd glow32.png
+newmtl anvil_01
+illum 1
+map_Kd anvil_01.png

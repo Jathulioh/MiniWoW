@@ -1,0 +1,6 @@
+newmtl bookstack01
+illum 1
+map_Kd bookstack01.png
+newmtl armorreflectgold
+illum 1
+map_Kd armorreflectgold.png

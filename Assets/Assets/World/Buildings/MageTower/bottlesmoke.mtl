@@ -1,0 +1,6 @@
+newmtl vial05
+illum 1
+map_Kd vial05.png
+newmtl waterfallsteam
+illum 1
+map_Kd waterfallsteam.png

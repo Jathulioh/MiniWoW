@@ -1,0 +1,6 @@
+newmtl dwarvenrifle01
+illum 1
+map_Kd dwarvenrifle01.png
+newmtl dwarventargetrangeboard
+illum 1
+map_Kd dwarventargetrangeboard.png

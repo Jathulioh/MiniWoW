@@ -1,0 +1,9 @@
+newmtl hanginglantern01
+illum 1
+map_Kd hanginglantern01.png
+newmtl lightglass02
+illum 1
+map_Kd lightglass02.png
+newmtl glow32
+illum 1
+map_Kd glow32.png
