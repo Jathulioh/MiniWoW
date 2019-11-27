@@ -21,6 +21,7 @@ public class Entity : MonoBehaviour
 	public GameObject targetOf;
 	public bool attacking;
 	public bool beingAttacked;
+	public bool isDead;
 
 	[HideInInspector] public Spellbook spellBook;
 

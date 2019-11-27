@@ -14,12 +14,14 @@ public class Player : Entity
 	public GameObject hoverTarget;
 
 	[HideInInspector] public PlayerController playerController;
+	[HideInInspector] public QuestBook questBook;
 	
 
 	private void Start()
 	{
 		playerController = this.gameObject.GetComponent<PlayerController>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();
+		questBook = gameObject.GetComponentInChildren<QuestBook>();
 	}
 
 	private void Update()
@@ -55,4 +57,13 @@ public class Player : Entity
 			}
 		}
 	}
+
+	public void UpdateQuestList()
+	{
+		if (currentTarget.GetComponent<Mob>().isDead)
+		{
+			questBook.QuestCreatureCheck(currentTarget.GetComponent<Mob>().groupID);
+		}
+	}
+
 }

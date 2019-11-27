@@ -16,6 +16,7 @@ public class Mob : Entity
 
 	[Header("Creature Info")]
 
+	public int groupID;
 	public strengthClass rarity;
 	public float aggroRadius;
 
@@ -31,10 +32,11 @@ public class Mob : Entity
 
 		
 
-		if (BeingAttacked())
+		if (BeingAttacked() && !isDead)
 		{
 			Combat();
 			MoveTo(currentTarget.transform.position, 2.5f);
+			Death();
 		}
 	}
 
@@ -83,6 +85,20 @@ public class Mob : Entity
 	void DistanceCheck()
 	{
 		
+	}
+
+	void Death()
+	{
+		if (GetCurrentHealth() <= 0)
+		{
+			Debug.Log("Died");
+			isDead = true;
+			attacking = false;
+			if (targetOf.GetComponent<Player>().attacking && targetOf.GetComponent<Player>().currentTarget == this.gameObject)
+			{
+				targetOf.GetComponent<Player>().UpdateQuestList();
+			}
+		}
 	}
 
 }

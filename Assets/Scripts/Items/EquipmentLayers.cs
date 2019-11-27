@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
+[ExecuteInEditMode]
 public class EquipmentLayers
 {
 	public enum layer { baseLayer, faceLayer, facialHairLayer, scalpLayer, underwearLayer, upperBodyLayer, shirtUpperLayer, shirtLowerLayer, shirtSleeveLowerLayer, shirtSleeveUpperLayer, torsoUpperLayer, torsoLowerLayer, sleeveUpperLayer, sleeveLowerLayer, bracerLayer, wristLayer, gloveLayer, legUpperLayer, legBeltLayer, legLowerLayer, legBootLayer, legFootLayer }

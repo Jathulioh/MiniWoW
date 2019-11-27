@@ -132,11 +132,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (player.attacking)
 		{
-			animController.SetBool("inCombat", true);
+			//animController.SetBool("inCombat", true);
 		}
 		else
 		{
-			animController.SetBool("inCombat", false);
+			//animController.SetBool("inCombat", false);
 		}
 	}
 

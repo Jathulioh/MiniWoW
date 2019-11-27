@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class Equipment : MonoBehaviour
+public class CharacterTextureCreator : MonoBehaviour
 {
-	public EquipmentLayers[] layers;
-	
-
     // Start is called before the first frame update
     void Start()
     {

@@ -69,7 +69,6 @@ public class Spell : MonoBehaviour
 		}
 		else
 		{
-			Debug.Log("Current Target == " + entity.currentTarget);
 			return true;
 		}
 	}
