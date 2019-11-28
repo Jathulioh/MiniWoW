@@ -16,7 +16,6 @@ public class QuestBook : MonoBehaviour
 	{
 		foreach (Quest quest in questList)
 		{
-			Debug.Log("check quest kills");
 			quest.Kills(GroupID);
 		}
 	}

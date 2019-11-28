@@ -145,4 +145,16 @@ public class PlayerController : MonoBehaviour
 		animController.SetBool("Attack", attack);
 	}
 
+	void Loot()
+	{
+		if (Input.GetMouseButtonUp(1) && player.hoverTarget != null)
+		{
+			player.currentTarget = player.hoverTarget;
+			if (player.currentTarget.GetComponent<Entity>().isDead && player.currentTarget.GetComponent<Entity>().isLootable)
+			{
+				
+			}
+		}
+	}
+
 }

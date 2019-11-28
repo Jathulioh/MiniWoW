@@ -22,6 +22,7 @@ public class Entity : MonoBehaviour
 	public bool attacking;
 	public bool beingAttacked;
 	public bool isDead;
+	public bool isLootable;
 
 	[HideInInspector] public Spellbook spellBook;
 
@@ -84,6 +85,16 @@ public class Entity : MonoBehaviour
 	public void AttackPower()
 	{
 		attackPower = (level * 3) + (strength * 2 - 20);
+	}
+
+
+
+	public void Lootable()
+	{
+		if (this.gameObject.GetComponent<DropTable>())
+		{
+			isLootable = true;
+		}
 	}
 
 }

@@ -26,10 +26,8 @@ public class Quest : MonoBehaviour
 		{
 			if (tasks.creatureGroupID != -1)
 			{
-				Debug.Log("Has Creature ID");
 				if (tasks.creatureGroupID == creatureGID)
 				{
-					Debug.Log("Creature ID Matches Quest");
 					tasks.numberDone += 1;
 
 					if (tasks.numberDone == tasks.numberOf)
