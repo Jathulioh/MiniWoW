@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class Inventory : MonoBehaviour
+public class EquipmentScreen : MonoBehaviour
 {
 	[Header("Equipped Items")]
 	public Equipment head		= null;

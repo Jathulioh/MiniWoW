@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4387758896619048475}
   - component: {fileID: 4387758896619048472}
   - component: {fileID: 4387758896619048477}
+  - component: {fileID: 8896077549204322048}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -92,6 +93,7 @@ MonoBehaviour:
   targetOf: {fileID: 0}
   attacking: 0
   beingAttacked: 0
+  isDead: 0
   spellBook: {fileID: 0}
   stamina: 20
   strength: 200
@@ -105,8 +107,31 @@ MonoBehaviour:
   spirit: 0
   characterRace: 0
   characterClass: 0
+  characterGender: 0
   hoverTarget: {fileID: 0}
   playerController: {fileID: 0}
+  questBook: {fileID: 0}
+--- !u!114 &8896077549204322048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387758896619048473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b54fe7b576aa94db8b739a2aa79599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4387758897836407859
 GameObject:
   m_ObjectHideFlags: 0

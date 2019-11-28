@@ -170,7 +170,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: 09277e62095425d40a9c4845005c9bd1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 354220354}
   - component: {fileID: 354220353}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: RenderTextureCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3451,7 +3451,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8180df9c56a78ee41b5e3bd78c7af26e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3523,7 +3523,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1cbdc4808485d174eacb999f08cec6b1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3789,6 +3789,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &617214152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617214154}
+  - component: {fileID: 617214153}
+  m_Layer: 0
+  m_Name: KoboldCandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617214153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617214152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00990bd0e0c182b498b9f8007dfb2d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 0}
+  itemName: Kobald Candle
+  itemDescription: Usually sits on a kobolds head
+  stackable: 1
+  maxStackSize: 64
+  currentItemStack: 0
+--- !u!4 &617214154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617214152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -60.609314, y: 0.9760785, z: 61.639595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &622374811
 PrefabInstance:
@@ -4392,7 +4441,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: ac5a8459e724e2f46b2c02124407de2b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5189,7 +5238,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: e91809b203be08049bb8527d1c35f0c4, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5458,13 +5507,13 @@ MonoBehaviour:
   neck: {fileID: 0}
   shoulder: {fileID: 0}
   back: {fileID: 0}
-  chest: {fileID: 0}
+  chest: {fileID: 615675071}
   shirt: {fileID: 0}
   tabard: {fileID: 0}
   wrist: {fileID: 0}
   hands: {fileID: 0}
   waist: {fileID: 0}
-  legs: {fileID: 0}
+  legs: {fileID: 1299548419}
   feet: {fileID: 0}
   ring1: {fileID: 0}
   ring2: {fileID: 0}
@@ -6387,7 +6436,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: 510575c56d96f3a4bb306512bd4db5fc, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6739,7 +6788,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5dda258386e0dd3448ab044df68f38b2, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
