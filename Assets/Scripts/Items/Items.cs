@@ -15,6 +15,7 @@ public class Items : MonoBehaviour
 	public bool stackable;
 	public int maxStackSize;
 	public int currentItemStack;
+	public int vendorPrice;
 	public int questItemID;
 
 	

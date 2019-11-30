@@ -7,6 +7,7 @@ TagManager:
   - PlayerPortrait
   - TargetPortrait
   - Mob
+  - LootFrame
   layers:
   - Default
   - TransparentFX

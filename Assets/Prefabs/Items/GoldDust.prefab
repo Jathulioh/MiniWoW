@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7879859609375007971}
   - component: {fileID: 7879859609375007964}
   m_Layer: 0
-  m_Name: CandleWax
+  m_Name: GoldDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,10 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   quality: 0
-  itemIcon: {fileID: 0}
-  itemName: Candle Wax
+  itemIcon: {fileID: 2800000, guid: 4959e41c2cb26154baa4a6b370bd7e6e, type: 3}
+  itemName: Gold Dust
   itemDescription: 
   stackable: 1
   maxStackSize: 64
   currentItemStack: 0
+  vendorPrice: 0
   questItemID: -1

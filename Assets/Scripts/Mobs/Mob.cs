@@ -10,6 +10,7 @@ public class Mob : Entity
 	public enum react {Hostile, Neutral, Friendly}
 
 	public NavMeshAgent agent;
+	private DropTable dropTable;
 
 	public react reactHorde;
 	public react reactAlliance;
@@ -25,6 +26,7 @@ public class Mob : Entity
 	{
 		agent = gameObject.GetComponent<NavMeshAgent>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();
+		dropTable = gameObject.GetComponent<DropTable>();
 	}
 
 	private void Update()
@@ -94,6 +96,7 @@ public class Mob : Entity
 			Debug.Log("Died");
 			isDead = true;
 			attacking = false;
+			dropTable.CalculateLoot();
 			if (targetOf.GetComponent<Player>().attacking && targetOf.GetComponent<Player>().currentTarget == this.gameObject)
 			{
 				targetOf.GetComponent<Player>().UpdateQuestList();

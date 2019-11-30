@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
 		Rotation();
 		AnimationSettings();
 		Combat();
+		Loot();
     }
 
 	void Movement()
@@ -152,7 +153,9 @@ public class PlayerController : MonoBehaviour
 			player.currentTarget = player.hoverTarget;
 			if (player.currentTarget.GetComponent<Entity>().isDead && player.currentTarget.GetComponent<Entity>().isLootable)
 			{
-				
+				player.lootFrame.lootable = null;
+				Debug.Log("Open Up Loot With Populated List");
+				player.lootFrame.lootable = player.currentTarget.GetComponent<DropTable>().droppedItems;
 			}
 		}
 	}

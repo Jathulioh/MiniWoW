@@ -15,6 +15,7 @@ public class Player : Entity
 
 	[HideInInspector] public PlayerController playerController;
 	[HideInInspector] public QuestBook questBook;
+	[HideInInspector] public LootFrame lootFrame;
 	
 
 	private void Start()
@@ -22,6 +23,7 @@ public class Player : Entity
 		playerController = this.gameObject.GetComponent<PlayerController>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();
 		questBook = gameObject.GetComponentInChildren<QuestBook>();
+		lootFrame = GameObject.FindGameObjectWithTag("LootFrame").GetComponent<LootFrame>();
 	}
 
 	private void Update()

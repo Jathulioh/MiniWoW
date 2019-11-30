@@ -96,5 +96,4 @@ public class Entity : MonoBehaviour
 			isLootable = true;
 		}
 	}
-
 }

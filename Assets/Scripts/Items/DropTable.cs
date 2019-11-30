@@ -16,9 +16,23 @@ public class DropTable : MonoBehaviour
 
 	public List<LootTable> dropList;
 
+	public List<Items> droppedItems;
+
 	void Start()
 	{
 		
+	}
+
+	public void CalculateLoot()
+	{
+		foreach (LootTable loot in dropList)
+		{
+			int lootDice = Random.Range(0, 100);
+			if (lootDice <= loot.dropChance)
+			{
+				droppedItems.Add(loot.itemList);
+			}
+		}
 	}
 
 	void Loot()
