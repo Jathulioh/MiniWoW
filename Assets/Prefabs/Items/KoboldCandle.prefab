@@ -45,10 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 10
   quality: 1
-  itemIcon: {fileID: 0}
-  itemName: Kobald Candle
+  itemIcon: {fileID: 21300000, guid: 247f14a4c3951164289c73204b44fe53, type: 3}
+  itemName: Kobold Candle
   itemDescription: Usually sits on a kobolds head
   stackable: 1
   maxStackSize: 64
   currentItemStack: 0
+  vendorPrice: 0
   questItemID: 1

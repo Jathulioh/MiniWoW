@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
 
 	private void Start()
 	{
-		inventory.Capacity = 8;
+		inventory.Capacity = 16;
 	}
 
 }

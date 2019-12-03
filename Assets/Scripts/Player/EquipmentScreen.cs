@@ -69,7 +69,7 @@ public class EquipmentScreen : MonoBehaviour
 	public RawImage legBeltLayer			= null;
 	public RawImage legLowerLayer			= null;
 	public RawImage legBootLayer			= null;
-	public RawImage LegFootLayer			= null;
+	public RawImage legFootLayer			= null;
 
 	// Start is called before the first frame update
 	void Start()
@@ -94,6 +94,11 @@ public class EquipmentScreen : MonoBehaviour
 		{
 			CheckLayers(legs);
 			currentLegs = legs;
+		}
+		if (feet != currentFeet)
+		{
+			CheckLayers(feet);
+			currentFeet = feet;
 		}
 	}
 
@@ -139,6 +144,11 @@ public class EquipmentScreen : MonoBehaviour
 			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBootLayer)
 			{
 				legBootLayer.texture = item.layers[i].layerImageMale;
+			}
+			//else { sleeveUpperLayer.texture = alpha; }
+			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legFootLayer)
+			{
+				legFootLayer.texture = item.layers[i].layerImageMale;
 			}
 			//else { sleeveUpperLayer.texture = alpha; }
 		}

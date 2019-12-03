@@ -4,21 +4,51 @@ using UnityEngine;
 [System.Serializable]
 public class QuestObjectives
 {
-	public enum objectives { Kills, Collect, Fetch }
+	public enum objectives {Kills, Collect, Fetch, Talk}
 	public objectives tasks;
 	public int numberOf;
 	public int numberDone;
 	public int creatureGroupID;
 	public bool completed;
+	
 }
 
 public class Quest : MonoBehaviour
 {
-
+	public bool active;
+	public string questName;
+	[TextArea(20, 100)]
+	public string questDescription;
 	public int levelRequirement = 0;
+	public Player.classes[] classRequirement;
 
 	public QuestObjectives[] questTasks;
 
+	public GameObject handIn;
+
+	private void Start()
+	{
+		if (CompletionCheck() == true && active == true)
+		{
+			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+		}
+		else if(CompletionCheck() == false && active == true)
+		{
+			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+		}
+	}
+
+	private void Update()
+	{
+		if (CompletionCheck() == true && active == true)
+		{
+			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+		}
+		else if(CompletionCheck() == false && active == true)
+		{
+			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+		}
+	}
 
 	public void Kills(int creatureGID)
 	{
@@ -45,6 +75,29 @@ public class Quest : MonoBehaviour
 	public void Fetch()
 	{
 
+	}
+
+	public void Talk()
+	{
+		foreach (QuestObjectives questObjectives in questTasks)
+		{
+			if (questObjectives.tasks == QuestObjectives.objectives.Talk)
+			{
+				questObjectives.completed = true;
+			}
+		}
+	}
+
+	public bool CompletionCheck()
+	{
+		for (int i = 0; i < questTasks.Length; ++i)
+		{
+			if (questTasks[i].completed == false)
+			{
+				return false;
+			}
+		}
+		return true;
 	}
 
 }

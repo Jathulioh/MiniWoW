@@ -15,15 +15,18 @@ public class Player : Entity
 
 	[HideInInspector] public PlayerController playerController;
 	[HideInInspector] public QuestBook questBook;
+	[HideInInspector] public Inventory inventory;
 	[HideInInspector] public LootFrame lootFrame;
-	
+	[HideInInspector] public AcceptQuest questFrame;
 
 	private void Start()
 	{
 		playerController = this.gameObject.GetComponent<PlayerController>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();
 		questBook = gameObject.GetComponentInChildren<QuestBook>();
+		inventory = gameObject.GetComponent<Inventory>();
 		lootFrame = GameObject.FindGameObjectWithTag("LootFrame").GetComponent<LootFrame>();
+		questFrame = GameObject.FindGameObjectWithTag("QuestFrame").GetComponent<AcceptQuest>();
 	}
 
 	private void Update()

@@ -19,6 +19,7 @@ public class Entity : MonoBehaviour
 
 	public GameObject currentTarget;
 	public GameObject targetOf;
+	public bool attackable;
 	public bool attacking;
 	public bool beingAttacked;
 	public bool isDead;
@@ -44,11 +45,25 @@ public class Entity : MonoBehaviour
 	public int bonusArmour;
 	public int spirit;
 
+	[Header("Quests")]
+	public bool QuestGiver;
+
+	public GameObject questGiverAttachment;
+	public GameObject currentTalkToMe;
+
+	public List<GameObject> quests;
+	public List<GameObject> questHandIns;
+
+	public GameObject talktome;
+	public GameObject talktomeQuestionGray;
+	public GameObject talktomeQuestion;
+
 	void Start()
 	{
 		BaseHealth();
 		AttackPower();
 		currentHealthPoints = healthPoints;
+		Quests();
 	}
 
 	public virtual void BaseHealth()
@@ -87,7 +102,36 @@ public class Entity : MonoBehaviour
 		attackPower = (level * 3) + (strength * 2 - 20);
 	}
 
+	public void QuestHandIn(bool complete)
+	{
+		if (currentTalkToMe != null)
+		{
+			Destroy(currentTalkToMe);
+		}
+		if (complete == false)
+		{
+			currentTalkToMe = Instantiate(talktomeQuestionGray, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
+		}
+		else
+		{
+			currentTalkToMe = Instantiate(talktomeQuestion, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
+		}
+	}
 
+	void Quests()
+	{
+		if (currentTalkToMe != null)
+		{
+			Destroy(currentTalkToMe);
+		}
+		if (quests.Count > 0)
+		{
+			currentTalkToMe = Instantiate(talktome, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
+		}
+	}
 
 	public void Lootable()
 	{

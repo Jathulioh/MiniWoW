@@ -6,6 +6,7 @@ public class QuestBook : MonoBehaviour
 {
 
 	public List<Quest> questList;
+	public List<Quest> completedQuestList;
 
 	public void QuestListCheck()
 	{
@@ -18,6 +19,11 @@ public class QuestBook : MonoBehaviour
 		{
 			quest.Kills(GroupID);
 		}
+	}
+
+	public void CheckCompletedList()
+	{
+
 	}
 
 }

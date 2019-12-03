@@ -9,7 +9,7 @@ public class Items : MonoBehaviour
 
 	public itemType type;
 	public itemQuality quality;
-	public Texture2D itemIcon;
+	public Sprite itemIcon;
 	public string itemName;
 	public string itemDescription;
 	public bool stackable;

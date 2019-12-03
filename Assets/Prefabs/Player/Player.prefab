@@ -1,5 +1,105 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &813273449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813273450}
+  m_Layer: 2
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813273450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813273449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4387758896226305022}
+  m_Father: {fileID: 4387758896619048474}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1210650438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1210650439}
+  - component: {fileID: 1210650440}
+  m_Layer: 2
+  m_Name: QuestBook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1210650439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210650438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4387758896619048474}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210650440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210650438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29b3f9f0c002ab4bb60749f33aec21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4387758896619048473
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +113,7 @@ GameObject:
   - component: {fileID: 4387758896619048472}
   - component: {fileID: 4387758896619048477}
   - component: {fileID: 8896077549204322048}
+  - component: {fileID: 1156752387}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -32,6 +133,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4387758897836407858}
+  - {fileID: 813273450}
+  - {fileID: 1210650439}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 147.28801, z: 0}
@@ -82,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityName: Jathulioh
-  level: 20
+  level: 255
   healthPoints: 100
   currentHealthPoints: 0
   attackPower: 0
@@ -94,9 +197,10 @@ MonoBehaviour:
   attacking: 0
   beingAttacked: 0
   isDead: 0
+  isLootable: 0
   spellBook: {fileID: 0}
   stamina: 20
-  strength: 200
+  strength: 20
   agility: 20
   intellect: 20
   crit: 0
@@ -111,6 +215,8 @@ MonoBehaviour:
   hoverTarget: {fileID: 0}
   playerController: {fileID: 0}
   questBook: {fileID: 0}
+  inventory: {fileID: 0}
+  lootFrame: {fileID: 0}
 --- !u!114 &8896077549204322048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +238,67 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1156752387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387758896619048473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d92ad73566594a47a4831d77e9db909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 0}
+  neck: {fileID: 0}
+  shoulder: {fileID: 0}
+  back: {fileID: 0}
+  chest: {fileID: 0}
+  shirt: {fileID: 0}
+  tabard: {fileID: 0}
+  wrist: {fileID: 0}
+  hands: {fileID: 0}
+  waist: {fileID: 0}
+  legs: {fileID: 0}
+  feet: {fileID: 0}
+  ring1: {fileID: 0}
+  ring2: {fileID: 0}
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  mainhand: {fileID: 0}
+  offhand: {fileID: 0}
+  alpha: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  baseLayer: {fileID: 0}
+  faceLayer: {fileID: 0}
+  facialHairLayer: {fileID: 0}
+  scalpLayer: {fileID: 0}
+  underwearLayer: {fileID: 0}
+  upperBodyLayer: {fileID: 0}
+  shirtUpperLayer: {fileID: 0}
+  shirtLowerLayer: {fileID: 0}
+  shirtSleeveLowerLayer: {fileID: 0}
+  shirtSleeveUpperLayer: {fileID: 0}
+  torsoUpperLayer: {fileID: 0}
+  torsoLowerLayer: {fileID: 0}
+  sleeveLowerLayer: {fileID: 0}
+  sleeveUpperLayer: {fileID: 0}
+  bracerLayer: {fileID: 0}
+  wristLayer: {fileID: 0}
+  gloveLayer: {fileID: 0}
+  legUpperLayer: {fileID: 0}
+  legBeltLayer: {fileID: 0}
+  legLowerLayer: {fileID: 0}
+  legBootLayer: {fileID: 0}
+  legFootLayer: {fileID: 0}
 --- !u!1 &4387758897836407859
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +344,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spells: []
+--- !u!1001 &4387758896226705354
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 813273450}
+    m_Modifications:
+    - target: {fileID: 100436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_Name
+      value: humanmale_hd
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: df8dd45b67a6a6547946a61ea8fa8213, type: 3}
+--- !u!4 &4387758896226305022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400436, guid: df8dd45b67a6a6547946a61ea8fa8213,
+    type: 3}
+  m_PrefabInstance: {fileID: 4387758896226705354}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4387758896456501645
 PrefabInstance:
   m_ObjectHideFlags: 0

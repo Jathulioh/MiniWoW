@@ -104,4 +104,11 @@ public class Mob : Entity
 		}
 	}
 
+	void QuestHandIn(GameObject handin)
+	{
+		
+		
+		
+	}
+
 }

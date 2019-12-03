@@ -41,8 +41,7 @@ public class PlayerController : MonoBehaviour
 		Movement();
 		Rotation();
 		AnimationSettings();
-		Combat();
-		Loot();
+		Interact();
     }
 
 	void Movement()
@@ -114,19 +113,90 @@ public class PlayerController : MonoBehaviour
 		//animController.SetFloat("moveSpeed", moveSpeed);
 	}
 
-	void Combat()
+	void Interact()
 	{
 		if (Input.GetMouseButtonUp(1) && player.hoverTarget != null)
 		{
 			player.currentTarget = player.hoverTarget;
-			foreach (GameObject spell in player.spellBook.spells)
+
+			if (player.currentTarget.GetComponent<Entity>().allignment != player.allignment && player.currentTarget.GetComponent<Mob>() && !player.currentTarget.GetComponent<Entity>().isDead && player.currentTarget.GetComponent<Entity>().attackable)
 			{
-				if (spell.name == "AutoAttack")
+				if (player.allignment == Entity.sides.Alliance)
 				{
-					spell.GetComponent<Spell>().Use();
+					if (player.currentTarget.GetComponent<Mob>().reactAlliance == Mob.react.Hostile)
+					{
+						Combat();
+					}
+				}
+				else if (player.allignment == Entity.sides.Horde)
+				{
+					if (player.currentTarget.GetComponent<Mob>().reactHorde == Mob.react.Hostile)
+					{
+						Combat();
+					}
+				}
+			}
+			else if (player.currentTarget.GetComponent<Entity>().isDead && player.currentTarget.GetComponent<Entity>().isLootable)
+			{
+				Loot();
+			}
+			else if (player.currentTarget.GetComponent<Entity>().quests.Count > 0)
+			{
+				QuestFrame();
+			}
+		}
+	}
+
+	void Combat()
+	{
+		if (player.currentTarget.GetComponent<Entity>().isDead)
+		{
+			Debug.Log("I can't attack that target");
+			return;
+		}
+		foreach (GameObject spell in player.spellBook.spells)
+		{
+			if (spell.name == "AutoAttack")
+			{
+				spell.GetComponent<Spell>().Use();
+			}
+		}
+	}
+
+	void Loot()
+	{
+		player.lootFrame.lootable = null;
+		player.lootFrame.lootable = player.currentTarget.GetComponent<DropTable>().droppedItems;
+		player.lootFrame.looter = player.gameObject;
+		player.lootFrame.ResetList();
+		player.lootFrame.SortItems();
+	}
+
+	void QuestFrame()
+	{
+		player.questFrame.Clear();
+		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
+		{
+			if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().levelRequirement <= player.level)
+			{
+				if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement.Length > 0)
+				{
+					for (int j = 0; j < player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement.Length; j++)
+					{
+						if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement[j] == player.characterClass)
+						{
+							player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
+						}
+					}
+				}
+				else
+				{
+					player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
 				}
 			}
 		}
+		player.questFrame.GenerateList();
+		player.questFrame.Open(this.gameObject);
 	}
 
 	void AnimationSettings()
@@ -146,18 +216,6 @@ public class PlayerController : MonoBehaviour
 		animController.SetBool("Attack", attack);
 	}
 
-	void Loot()
-	{
-		if (Input.GetMouseButtonUp(1) && player.hoverTarget != null)
-		{
-			player.currentTarget = player.hoverTarget;
-			if (player.currentTarget.GetComponent<Entity>().isDead && player.currentTarget.GetComponent<Entity>().isLootable)
-			{
-				player.lootFrame.lootable = null;
-				Debug.Log("Open Up Loot With Populated List");
-				player.lootFrame.lootable = player.currentTarget.GetComponent<DropTable>().droppedItems;
-			}
-		}
-	}
+
 
 }

@@ -25,13 +25,25 @@ public class DropTable : MonoBehaviour
 
 	public void CalculateLoot()
 	{
+		for (int i = 0; i < droppedItems.Count; i++)
+		{
+			if (droppedItems[i] == null)
+			{
+				droppedItems.RemoveAt(i);
+			}
+			else
+			{
+				continue;
+			}
+		}
+
 		foreach (LootTable loot in dropList)
 		{
-			int lootDice = Random.Range(0, 100);
-			if (lootDice <= loot.dropChance)
-			{
-				droppedItems.Add(loot.itemList);
-			}
+				int lootDice = Random.Range(0, 100);
+				if (lootDice <= loot.dropChance)
+				{
+					droppedItems.Add(loot.itemList);
+				}
 		}
 	}
 
