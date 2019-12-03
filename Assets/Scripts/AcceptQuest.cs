@@ -16,7 +16,11 @@ public class AcceptQuest : MonoBehaviour
 	public void AcceptQuests(int ID)
 	{
 		Debug.Log(ID);
-		player.GetComponent<Player>().questBook.questList.Add(availableQuests[ID]);
+		
+		GameObject temp = Instantiate(availableQuests[ID].gameObject, player.GetComponent<Player>().questBook.gameObject.transform);
+		temp.GetComponent<Quest>().active = true;
+		player.GetComponent<Player>().questBook.questList.Add(temp.GetComponent<Quest>());
+
 	}
 
 	public void ButtonListeners()

@@ -37,11 +37,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Interact();
 		Controls();
 		Movement();
 		Rotation();
 		AnimationSettings();
-		Interact();
     }
 
 	void Movement()
@@ -51,16 +51,19 @@ public class PlayerController : MonoBehaviour
 			if (Input.GetMouseButton(1))
 			{
 				Cursor.visible = false;
+				Cursor.lockState = CursorLockMode.Confined;
 				moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
 			}
 			else
 			{
 				Cursor.visible = true;
+				Cursor.lockState = CursorLockMode.None;
 				moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxisRaw("Vertical"));
 			}
 			if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
 			{
 				Cursor.visible = false;
+				Cursor.lockState = CursorLockMode.Confined;
 				moveDirection = new Vector3(0.0f, 0.0f, 1.0f);
 			}
 			moveDirection = moveDirection.normalized;
@@ -142,7 +145,7 @@ public class PlayerController : MonoBehaviour
 			}
 			else if (player.currentTarget.GetComponent<Entity>().quests.Count > 0)
 			{
-				QuestFrame();
+				AcceptQuestFrame();
 			}
 		}
 	}
@@ -172,7 +175,7 @@ public class PlayerController : MonoBehaviour
 		player.lootFrame.SortItems();
 	}
 
-	void QuestFrame()
+	void AcceptQuestFrame()
 	{
 		player.questFrame.Clear();
 		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
