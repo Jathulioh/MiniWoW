@@ -6,7 +6,7 @@ public class QuestBook : MonoBehaviour
 {
 
 	public List<Quest> questList;
-	public List<Quest> completedQuestList;
+	public List<int> completedQuestList;
 
 	public void QuestListCheck()
 	{

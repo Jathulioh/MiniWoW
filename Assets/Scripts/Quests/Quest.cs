@@ -109,4 +109,9 @@ public class Quest : MonoBehaviour
 		return true;
 	}
 
+	public void ClearHandInCheck()
+	{
+		handIn.GetComponent<Entity>().questHandIns.Remove(this.gameObject);
+	}
+
 }

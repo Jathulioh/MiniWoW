@@ -182,43 +182,19 @@ public class PlayerController : MonoBehaviour
 	public void AcceptQuestFrame()
 	{
 		player.questFrame.ClearAvailable();
-		for (int h = 0; h < player.currentTarget.GetComponent<Entity>().quests.Count; h++)
+		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
 		{
-			if (player.currentTarget.GetComponent<Entity>().quests[h].GetComponent<Quest>().levelRequirement <= player.level)
+			if (!QuestBookCheck(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>()))
 			{
-				if (player.currentTarget.GetComponent<Entity>().quests[h].GetComponent<Quest>().classRequirement.Length > 0)
-				{
-					for (int j = 0; j < player.currentTarget.GetComponent<Entity>().quests[h].GetComponent<Quest>().classRequirement.Length; j++)
-					{
-						if (player.currentTarget.GetComponent<Entity>().quests[h].GetComponent<Quest>().classRequirement[j] == player.characterClass)
-						{
-							if (player.questBook.questList.Count > 0)
-							{
-								for (int i = 0; i < player.questBook.questList.Count; i++)
-								{
-									int QuestID = player.questBook.questList[i].questID;
-									for (int k = 0; k < player.currentTarget.GetComponent<Entity>().quests.Count; k++)
-									{
-										Debug.Log(k + " " + h);
-										if (QuestID != player.currentTarget.GetComponent<Entity>().quests[k].GetComponent<Quest>().questID)
-										{
-											Debug.Log("You have quests you can accept");
-											player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[k].GetComponent<Quest>());
-										}
-									}
-								}
-							}
-							else
-							{
-								Debug.Log("You have quests you can accept... but it shouldn't get here");
-								player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[h].GetComponent<Quest>());
-								
-							}
-						}
-					}
-				}
+				Debug.Log("acceptable quests: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
+				player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
+			}
+			else
+			{
+				Debug.Log("You cant accept: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
 			}
 		}
+
 		player.questFrame.GenerateList(player.questFrame.availableQuests, player.questFrame.acceptQuestInterface, true);
 		player.questFrame.OpenAvailable(this.gameObject);
 	}
@@ -299,34 +275,31 @@ public class PlayerController : MonoBehaviour
 		player.questFrame.OpenCompleted(this.gameObject);
 	}
 
-	public bool QuestBookCheck()
+	public bool QuestBookCheck(Quest q)
 	{
 		if (player.questBook.questList.Count > 0)
 		{
 			for (int i = 0; i < player.questBook.questList.Count; i++)
 			{
-				int QuestID = player.questBook.questList[i].questID;
-				for (int j = 0; j < player.currentTarget.GetComponent<Entity>().quests.Count; j++)
+				if (player.questBook.questList[i].questID == q.questID)
 				{
-					if (QuestID == player.currentTarget.GetComponent<Entity>().quests[j].GetComponent<Quest>().questID)
-					{
-						Debug.Log("You're already on this quest");
-						return true;
-					}
-					else
-					{
-						Debug.Log("You have quests you can accept");
-						return false;
-					}
+					return true;
 				}
 			}
 		}
-		else
+		if (player.questBook.completedQuestList.Count > 0)
 		{
-			Debug.Log("You have quests you can accept");
-			return false;
+			for (int j = 0; j < player.questBook.completedQuestList.Count; j++)
+			{
+				if (player.questBook.completedQuestList[j] == q.questID)
+				{
+					return true;
+				}
+			}
 		}
+		
 		return false;
+		
 	}
 
 	void AnimationSettings()

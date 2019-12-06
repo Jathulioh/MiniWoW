@@ -25,10 +25,12 @@ public class AcceptQuest : MonoBehaviour
 	public void CompleteQuests(int ID)
 	{
 		GameObject temp = completedQuests[ID].gameObject;
-		player.GetComponent<Player>().questBook.completedQuestList.Add(temp.GetComponent<Quest>());
+		player.GetComponent<Player>().questBook.completedQuestList.Add(temp.GetComponent<Quest>().questID);
 		player.GetComponent<Player>().AddExperience(temp.GetComponent<Quest>().experienceReward);
 		temp.GetComponent<Quest>().active = false;
 		player.GetComponent<Player>().questBook.questList.Remove(temp.GetComponent<Quest>());
+		temp.GetComponent<Quest>().ClearHandInCheck();
+		Destroy(temp);
 	}
 
 	public void ButtonListeners()
