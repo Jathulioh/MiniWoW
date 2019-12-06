@@ -9,6 +9,8 @@ public class Entity : MonoBehaviour
 
 	public string entityName;
 	public int level;
+	public int experience;
+	public int experienceTotal;
 	[SerializeField] int healthPoints;
 	[SerializeField] int currentHealthPoints;
 	[SerializeField] int attackPower;
@@ -30,13 +32,13 @@ public class Entity : MonoBehaviour
 	[Header("Primary")]
 	[Header("Attributes")]
 	//Stats
-	//Primary Attributes
+		//Primary Attributes
 	public int stamina;
 	public int strength;
 	public int agility;
 	public int intellect;
 	[Header("Secondary")]
-	//Secondary Attributes
+		//Secondary Attributes
 	public int crit;
 	public int haste;
 	public int mastery;
@@ -139,5 +141,10 @@ public class Entity : MonoBehaviour
 		{
 			isLootable = true;
 		}
+	}
+
+	public void AddExperience(int exp)
+	{
+		experience += exp;
 	}
 }

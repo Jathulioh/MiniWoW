@@ -10,19 +10,24 @@ public class QuestObjectives
 	public int numberDone;
 	public int creatureGroupID;
 	public bool completed;
-	
 }
 
 public class Quest : MonoBehaviour
 {
 	public bool active;
+	public int questID;
 	public string questName;
 	[TextArea(20, 100)]
 	public string questDescription;
 	public int levelRequirement = 0;
 	public Player.classes[] classRequirement;
+	public List<Quest> questRequirement;
 
 	public QuestObjectives[] questTasks;
+
+	public Items[] itemReward;
+	public Items[] choiceReward;
+	public int experienceReward;
 
 	public GameObject handIn;
 
@@ -43,6 +48,10 @@ public class Quest : MonoBehaviour
 		if (CompletionCheck() == true && active == true)
 		{
 			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+			if (!handIn.GetComponent<Entity>().questHandIns.Contains(this.gameObject))
+			{
+				handIn.GetComponent<Entity>().questHandIns.Add(this.gameObject);
+			}
 		}
 		else if(CompletionCheck() == false && active == true)
 		{

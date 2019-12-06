@@ -43,11 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7287f1bf4d641b4f85df1f169b39445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  questID: 3
+  questName: 
+  questDescription: 
   levelRequirement: 0
+  classRequirement: 
+  questRequirement: []
   questTasks:
   - tasks: 0
     numberOf: 8
     numberDone: 0
     creatureGroupID: 1
     completed: 0
-    handIn: {fileID: 0}
+  itemReward: []
+  choiceReward: []
+  experienceReward: 0
+  handIn: {fileID: 0}

@@ -70,5 +70,4 @@ public class Player : Entity
 			questBook.QuestCreatureCheck(currentTarget.GetComponent<Mob>().groupID);
 		}
 	}
-
 }
