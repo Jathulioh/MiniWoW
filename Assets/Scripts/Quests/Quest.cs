@@ -21,7 +21,7 @@ public class Quest : MonoBehaviour
 	public string questDescription;
 	public int levelRequirement = 0;
 	public Player.classes[] classRequirement;
-	public List<Quest> questRequirement;
+	public List<int> questRequirement;
 
 	public QuestObjectives[] questTasks;
 
@@ -33,14 +33,14 @@ public class Quest : MonoBehaviour
 
 	private void Start()
 	{
-		if (CompletionCheck() == true && active == true)
+		/*if (CompletionCheck() == true && active == true)
 		{
 			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
 		}
 		else if(CompletionCheck() == false && active == true)
 		{
 			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
-		}
+		}*/
 	}
 
 	private void Update()

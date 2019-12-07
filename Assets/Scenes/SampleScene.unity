@@ -3940,6 +3940,11 @@ PrefabInstance:
       propertyPath: experienceReward
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 3663782076397254566, guid: 1fabfe7750e849e4f920aaf436c88b69,
+        type: 3}
+      propertyPath: questID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fabfe7750e849e4f920aaf436c88b69, type: 3}
 --- !u!1 &605868904 stripped
@@ -4389,6 +4394,11 @@ PrefabInstance:
       propertyPath: experienceReward
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 215211129957126664, guid: 20a716202aa590a4a8bfb5be5281d0cf,
+        type: 3}
+      propertyPath: questID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a716202aa590a4a8bfb5be5281d0cf, type: 3}
 --- !u!1 &638215313 stripped
@@ -4534,7 +4544,6 @@ MonoBehaviour:
   - {fileID: 605868904}
   - {fileID: 2096649780}
   - {fileID: 638215313}
-  - {fileID: 680367489}
   questHandIns: []
   talktome: {fileID: 100002, guid: af967dad05ace62449f05e051fe88377, type: 3}
   talktomeQuestionGray: {fileID: 100002, guid: fa33396eeb2a18249bda68424754af44, type: 3}
@@ -4571,7 +4580,6 @@ Transform:
   - {fileID: 2096649781}
   - {fileID: 638215314}
   - {fileID: 605868905}
-  - {fileID: 680367490}
   m_Father: {fileID: 0}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 49.686, z: 0}
@@ -4608,7 +4616,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 670054135}
+    m_TransformParent: {fileID: 1345181887}
     m_Modifications:
     - target: {fileID: 2941828371254873234, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
@@ -4618,7 +4626,7 @@ PrefabInstance:
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -44.20622
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
@@ -4628,7 +4636,7 @@ PrefabInstance:
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.0108957
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
@@ -4638,7 +4646,7 @@ PrefabInstance:
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.99669516
+      value: -0.9966951
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
@@ -4648,12 +4656,12 @@ PrefabInstance:
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.08123336
+      value: -0.081233375
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873232, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
@@ -4672,6 +4680,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
+      propertyPath: questRequirement.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
+        type: 3}
+      propertyPath: classRequirement.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
+        type: 3}
       propertyPath: questName
       value: Kill The Kobalds
       objectReference: {fileID: 0}
@@ -4680,6 +4698,21 @@ PrefabInstance:
       propertyPath: handIn
       value: 
       objectReference: {fileID: 1345181883}
+    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
+        type: 3}
+      propertyPath: classRequirement.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
+        type: 3}
+      propertyPath: classRequirement.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
+        type: 3}
+      propertyPath: questRequirement.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91eed734be5f50f48be050dfb129961a, type: 3}
 --- !u!1 &680367489 stripped
@@ -6327,8 +6360,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297650280}
-  m_LocalRotation: {x: -0, y: 0.98937595, z: -0, w: 0.14538004}
-  m_LocalPosition: {x: -71.28, y: 2.932, z: 83.26}
+  m_LocalRotation: {x: 0.032413296, y: 0.93872094, z: -0.09204249, w: 0.330576}
+  m_LocalPosition: {x: -72.81735, y: 2.6933794, z: 82.66348}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6559,7 +6592,8 @@ MonoBehaviour:
   QuestGiver: 1
   questGiverAttachment: {fileID: 808799673}
   currentTalkToMe: {fileID: 0}
-  quests: []
+  quests:
+  - {fileID: 680367489}
   questHandIns: []
   talktome: {fileID: 100002, guid: af967dad05ace62449f05e051fe88377, type: 3}
   talktomeQuestionGray: {fileID: 100002, guid: fa33396eeb2a18249bda68424754af44, type: 3}
@@ -6593,6 +6627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 808799674}
+  - {fileID: 680367490}
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 49.686, z: 0}
@@ -8796,6 +8831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3481914322959256096, guid: 9ae66cf62dd310244b0ffb9aae440357,
         type: 3}
+      propertyPath: questRequirement.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481914322959256096, guid: 9ae66cf62dd310244b0ffb9aae440357,
+        type: 3}
       propertyPath: handIn
       value: 
       objectReference: {fileID: 1345181883}
@@ -8808,6 +8848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: experienceReward
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481914322959256096, guid: 9ae66cf62dd310244b0ffb9aae440357,
+        type: 3}
+      propertyPath: questID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae66cf62dd310244b0ffb9aae440357, type: 3}

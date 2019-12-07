@@ -63,6 +63,8 @@ public class Player : Entity
 		}
 	}
 
+
+
 	public void UpdateQuestList()
 	{
 		if (currentTarget.GetComponent<Mob>().isDead)

@@ -143,13 +143,13 @@ public class PlayerController : MonoBehaviour
 			{
 				Loot();
 			}
-			else if (player.currentTarget.GetComponent<Entity>().quests.Count > 0)
-			{
-				AcceptQuestFrame();
-			}
 			else if (player.currentTarget.GetComponent<Entity>().questHandIns.Count > 0)
 			{
 				CompleteQuestFrame();
+			}
+			else if (player.currentTarget.GetComponent<Entity>().quests.Count > 0)
+			{
+				AcceptQuestFrame();
 			}
 		}
 	}
@@ -184,9 +184,9 @@ public class PlayerController : MonoBehaviour
 		player.questFrame.ClearAvailable();
 		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
 		{
-			if (!QuestBookCheck(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>()))
+			if (!QuestBookCheck(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>()) && QuestRequirementCheck(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>()))
 			{
-				Debug.Log("acceptable quests: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
+				//Debug.Log("acceptable quests: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
 				player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
 			}
 			else
@@ -198,71 +198,6 @@ public class PlayerController : MonoBehaviour
 		player.questFrame.GenerateList(player.questFrame.availableQuests, player.questFrame.acceptQuestInterface, true);
 		player.questFrame.OpenAvailable(this.gameObject);
 	}
-
-	//THIS NEEDS TO BE REUSED OR DELETED
-	/*
-	 for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
-		{
-			Debug.Log(i);
-			if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().levelRequirement <= player.level)
-			{
-				if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement.Length > 0)
-				{
-					for (int j = 0; j < player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement.Length; j++)
-					{
-						if (player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().classRequirement[j] == player.characterClass)
-						{
-							if (player.questBook.questList.Count > 0)
-							{
-								
-								for (int k = 0; k < player.questBook.questList.Count; k++)
-								{
-									Debug.Log(player.questBook.questList[k].questID + " : " + player.questBook.questList[k].questName);
-									int QuestID = player.questBook.questList[k].questID;
-									if (QuestID == player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questID)
-									{
-										Debug.Log("Break: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questID + " : " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questName);
-										
-									}
-									else
-									{
-										Debug.Log("Add: " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questID + " : " + player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questName);
-										player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
-									}
-								}
-							}
-							else
-							{
-								player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
-							}
-						}
-					}
-				}
-				else
-				{
-					if (player.questBook.questList.Count > 0)
-					{
-						for (int k = 0; k < player.questBook.questList.Count; k++)
-						{
-							int QuestID = player.questBook.questList[k].questID;
-							if (QuestID == player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>().questID)
-							{
-								
-							}
-							else
-							{
-								player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
-							}
-						}
-					}
-					else
-					{
-						player.questFrame.availableQuests.Add(player.currentTarget.GetComponent<Entity>().quests[i].GetComponent<Quest>());
-					}
-				}
-			}
-		}
-	*/
 
 	public void CompleteQuestFrame()
 	{
@@ -297,9 +232,50 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 		}
-		
 		return false;
-		
+	}
+
+	public bool QuestRequirementCheck(Quest q)
+	{
+		if (q.levelRequirement > player.level)
+		{
+			return false;
+		}
+		else
+		{
+			if (q.classRequirement.Length != 0)
+			{
+				for (int i = 0; i < q.classRequirement.Length; i++)
+				{
+					if (q.classRequirement[i] == player.characterClass)
+					{
+						goto QuestReq;
+					}
+				}
+				return false;
+			}
+			else
+			{
+				goto QuestReq;
+			}
+		}
+
+		QuestReq:
+		if (q.questRequirement.Count != 0)
+		{
+			for (int i = 0; i < q.questRequirement.Count; i++)
+			{
+				if (player.questBook.completedQuestList.Contains(q.questRequirement[i]))
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	}
 
 	void AnimationSettings()
