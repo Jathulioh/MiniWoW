@@ -21,6 +21,9 @@ public class AcceptQuest : MonoBehaviour
 		GameObject temp = Instantiate(availableQuests[ID].gameObject, player.GetComponent<Player>().questBook.gameObject.transform);
 		temp.GetComponent<Quest>().active = true;
 		player.GetComponent<Player>().questBook.questList.Add(temp.GetComponent<Quest>());
+		availableQuests[ID].GetComponentInParent<Entity>().RemoveTalkToMe();
+		player.GetComponent<Player>().questBook.gameObject.GetComponent<QuestChecking>().QuestCheck();
+		player.GetComponent<Player>().questBook.gameObject.GetComponent<QuestChecking>().AvailableQuests();
 	}
 	public void CompleteQuests(int ID)
 	{
@@ -31,6 +34,9 @@ public class AcceptQuest : MonoBehaviour
 		player.GetComponent<Player>().questBook.questList.Remove(temp.GetComponent<Quest>());
 		temp.GetComponent<Quest>().ClearHandInCheck();
 		Destroy(temp);
+		completedQuests[ID].GetComponent<Quest>().handIn.GetComponent<Entity>().RemoveTalkToMe();
+		player.GetComponent<Player>().questBook.gameObject.GetComponent<QuestChecking>().QuestCheck();
+		player.GetComponent<Player>().questBook.gameObject.GetComponent<QuestChecking>().AvailableQuests();
 	}
 
 	public void ButtonListeners()
@@ -38,7 +44,6 @@ public class AcceptQuest : MonoBehaviour
 		GameObject lastClickedButton = EventSystem.current.currentSelectedGameObject;
 		if (buttonListener)
 		{
-			Debug.Log("accpeted quest?");
 			Destroy(lastClickedButton);
 			AcceptQuests(lastClickedButton.GetComponent<QuestID>().questID);
 		}

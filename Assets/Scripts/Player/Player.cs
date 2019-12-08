@@ -19,7 +19,7 @@ public class Player : Entity
 	[HideInInspector] public LootFrame lootFrame;
 	[HideInInspector] public AcceptQuest questFrame;
 
-	private void Start()
+	private void Awake()
 	{
 		playerController = this.gameObject.GetComponent<PlayerController>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 	CharacterController cc;
 	public Animator animController;
 	Camera mainCam;
-	Player player;
+	[HideInInspector]public Player player;
 
 	private Vector3 moveDirection;
 	private float yaw;
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 		}
 			moveDirection.y -= gravity * Time.deltaTime;
 
-			cc.Move(transform.TransformDirection(moveDirection) * Time.deltaTime);
+		cc.Move(transform.TransformDirection(moveDirection) * Time.deltaTime);
 		/*if 
 		{
 			animController.SetBool("isMoving", false);
@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour
 
 	void Rotation()
 	{
-		
 		if (Input.GetMouseButton(1))
 		{
 			Vector3 euler = mainCam.transform.rotation.eulerAngles;

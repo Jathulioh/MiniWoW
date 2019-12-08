@@ -17,7 +17,17 @@ ModelImporter:
     3300002: 1
     4300000: 0
     4300002: 1
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elwynntreetallcanopy_new01
+    second: {fileID: 2100000, guid: 29d2a1899091fbf4f9d1fc6aea355a65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elwynntreetallcomp_01
+    second: {fileID: 2100000, guid: 35b15c22845063f4e8a9256e4bbf81a1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

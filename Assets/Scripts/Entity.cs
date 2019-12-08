@@ -65,7 +65,6 @@ public class Entity : MonoBehaviour
 		BaseHealth();
 		AttackPower();
 		currentHealthPoints = healthPoints;
-		Quests();
 	}
 
 	public virtual void BaseHealth()
@@ -104,35 +103,33 @@ public class Entity : MonoBehaviour
 		attackPower = (level * 3) + (strength * 2 - 20);
 	}
 
-	public void QuestHandIn(bool complete)
+	public void RemoveTalkToMe()
 	{
-		if (currentTalkToMe != null)
-		{
-			Destroy(currentTalkToMe);
-		}
-		if (complete == false)
-		{
-			currentTalkToMe = Instantiate(talktomeQuestionGray, Vector3.zero, transform.rotation, questGiverAttachment.transform);
-			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
-		}
-		else
-		{
-			currentTalkToMe = Instantiate(talktomeQuestion, Vector3.zero, transform.rotation, questGiverAttachment.transform);
-			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
-		}
+		Debug.Log("RemoveTalkToMe");
+		Destroy(currentTalkToMe);
+		currentTalkToMe = null;
+
+	}
+	public void PendingHandIn()
+	{
+		Debug.Log("PendingHandIn");
+		RemoveTalkToMe();
+		currentTalkToMe = Instantiate(talktomeQuestion, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+		currentTalkToMe.transform.position = questGiverAttachment.transform.position;
+	}
+	public void PendingCompletion()
+	{
+		Debug.Log("PendingComplete");
+		RemoveTalkToMe();
+		currentTalkToMe = Instantiate(talktomeQuestionGray, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+		currentTalkToMe.transform.position = questGiverAttachment.transform.position;
 	}
 
-	void Quests()
+	public void AvailableQuests()
 	{
-		if (currentTalkToMe != null)
-		{
-			Destroy(currentTalkToMe);
-		}
-		if (quests.Count > 0)
-		{
-			currentTalkToMe = Instantiate(talktome, Vector3.zero, transform.rotation, questGiverAttachment.transform);
-			currentTalkToMe.transform.position = questGiverAttachment.transform.position;
-		}
+		RemoveTalkToMe();
+		currentTalkToMe = Instantiate(talktome, Vector3.zero, transform.rotation, questGiverAttachment.transform);
+		currentTalkToMe.transform.position = questGiverAttachment.transform.position;
 	}
 
 	public void Lootable()

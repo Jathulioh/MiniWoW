@@ -93,7 +93,6 @@ public class Mob : Entity
 	{
 		if (GetCurrentHealth() <= 0)
 		{
-			Debug.Log("Died");
 			isDead = true;
 			attacking = false;
 			dropTable.CalculateLoot();

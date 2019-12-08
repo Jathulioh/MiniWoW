@@ -47,15 +47,15 @@ public class Quest : MonoBehaviour
 	{
 		if (CompletionCheck() == true && active == true)
 		{
-			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+			handIn.GetComponent<Entity>().PendingHandIn();
 			if (!handIn.GetComponent<Entity>().questHandIns.Contains(this.gameObject))
 			{
 				handIn.GetComponent<Entity>().questHandIns.Add(this.gameObject);
 			}
 		}
-		else if(CompletionCheck() == false && active == true)
+		else if (CompletionCheck() == false && active == true)
 		{
-			handIn.GetComponent<Entity>().QuestHandIn(CompletionCheck());
+			handIn.GetComponent<Entity>().PendingCompletion();
 		}
 	}
 
