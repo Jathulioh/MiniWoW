@@ -16,7 +16,7 @@ public class Items : MonoBehaviour
 	public int maxStackSize;
 	public int currentItemStack;
 	public int vendorPrice;
-	public int questItemID;
+	public int questItemID; //Should be same ID as the quest
 
 	
 	private void Start()

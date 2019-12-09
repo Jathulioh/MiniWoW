@@ -7,10 +7,12 @@ public class Player : Entity
 	public enum races {Human, Dwarf, NightElf, Gnome, Draenei, Worgen, Orc, Undead, Tauren, Troll, BloodElf, Goblin, Pandaren }
 	public enum classes {Warrior, Paladin, Hunter, Rogue, Priest, Shaman, Mage, Warlock, Monk, Druid, DemonHunter, DeathKnight }
 	public enum gender { Male, Female }
+	[Header("Customization")]
 	public races characterRace;
 	public classes characterClass;
 	public gender characterGender;
 
+	[Header("Player Specific Vars")]
 	public GameObject hoverTarget;
 
 	[HideInInspector] public PlayerController playerController;

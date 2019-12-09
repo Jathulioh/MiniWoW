@@ -52,4 +52,4 @@ MonoBehaviour:
   maxStackSize: 64
   currentItemStack: 0
   vendorPrice: 0
-  questItemID: 1
+  questItemID: 2

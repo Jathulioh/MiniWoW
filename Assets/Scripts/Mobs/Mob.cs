@@ -20,7 +20,7 @@ public class Mob : Entity
 	public int groupID;
 	public strengthClass rarity;
 	public float aggroRadius;
-
+	public float respawnTimer;
 
 	private void Start()
 	{
@@ -94,13 +94,19 @@ public class Mob : Entity
 		if (GetCurrentHealth() <= 0)
 		{
 			isDead = true;
+			attackable = false;
 			attacking = false;
-			dropTable.CalculateLoot();
+			dropTable.CalculateLoot(targetOf);
 			if (targetOf.GetComponent<Player>().attacking && targetOf.GetComponent<Player>().currentTarget == this.gameObject)
 			{
 				targetOf.GetComponent<Player>().UpdateQuestList();
 			}
 		}
+	}
+
+	void Respawn()
+	{
+
 	}
 
 	void QuestHandIn(GameObject handin)

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 0.32333595, g: 0.46912536, b: 0.775517, a: 1}
+  m_IndirectSpecularColor: {r: 0.3101524, g: 0.44764906, b: 0.75019944, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -72,11 +72,11 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 0
     m_MixedBakeMode: 0
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 512
-    m_PVRBounces: 4
+    m_PVRBounces: 2
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
@@ -665,44 +665,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
-      propertyPath: questRequirement.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questName
-      value: Kill The Kobalds
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
       propertyPath: handIn
       value: 
       objectReference: {fileID: 1447100190}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[1]
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[2]
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questRequirement.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[0]
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91eed734be5f50f48be050dfb129961a, type: 3}
 --- !u!1 &53421194 stripped
@@ -4773,7 +4738,7 @@ PrefabInstance:
     - target: {fileID: 3663782076397254566, guid: 1fabfe7750e849e4f920aaf436c88b69,
         type: 3}
       propertyPath: experienceReward
-      value: 20000000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3663782076397254566, guid: 1fabfe7750e849e4f920aaf436c88b69,
         type: 3}
@@ -5227,7 +5192,7 @@ PrefabInstance:
     - target: {fileID: 215211129957126664, guid: 20a716202aa590a4a8bfb5be5281d0cf,
         type: 3}
       propertyPath: experienceReward
-      value: 20000000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 215211129957126664, guid: 20a716202aa590a4a8bfb5be5281d0cf,
         type: 3}
@@ -5644,44 +5609,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
-      propertyPath: questRequirement.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questName
-      value: Kill The Kobalds
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
       propertyPath: handIn
       value: 
       objectReference: {fileID: 1345181883}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[1]
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[2]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questRequirement.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91eed734be5f50f48be050dfb129961a, type: 3}
 --- !u!1 &680367489 stripped
@@ -10789,38 +10719,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
-      propertyPath: questRequirement.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questName
-      value: Kill The Kobalds
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
       propertyPath: handIn
       value: 
       objectReference: {fileID: 540173539}
     - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
         type: 3}
-      propertyPath: classRequirement.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: classRequirement.Array.data[2]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941828371254873235, guid: 91eed734be5f50f48be050dfb129961a,
-        type: 3}
-      propertyPath: questRequirement.Array.data[0]
-      value: 1
+      propertyPath: classRequirement.Array.data[0]
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91eed734be5f50f48be050dfb129961a, type: 3}
@@ -11410,13 +11315,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035111233}
-  m_LocalRotation: {x: 0.70666265, y: 0.47770056, z: 0.031053297, w: 0.5210238}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -70.88, y: 3, z: 70.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 44.968002, y: 130.03801, z: 90.054}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2035111236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11648,7 +11553,7 @@ PrefabInstance:
     - target: {fileID: 3481914322959256096, guid: 9ae66cf62dd310244b0ffb9aae440357,
         type: 3}
       propertyPath: experienceReward
-      value: 20000000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3481914322959256096, guid: 9ae66cf62dd310244b0ffb9aae440357,
         type: 3}
@@ -11842,7 +11747,7 @@ PrefabInstance:
     - target: {fileID: 4387758896619048474, guid: 2ee4714015c8ab9418216bee6c68bb1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -69.744
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 4387758896619048474, guid: 2ee4714015c8ab9418216bee6c68bb1a,
         type: 3}
@@ -11852,7 +11757,7 @@ PrefabInstance:
     - target: {fileID: 4387758896619048474, guid: 2ee4714015c8ab9418216bee6c68bb1a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 78.841
+      value: 62.26
       objectReference: {fileID: 0}
     - target: {fileID: 4387758896619048474, guid: 2ee4714015c8ab9418216bee6c68bb1a,
         type: 3}
@@ -12010,6 +11915,10 @@ PrefabInstance:
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 0b0805111b297534384860dc7a073acb, type: 2}
+    - target: {fileID: 1156752387, guid: 2ee4714015c8ab9418216bee6c68bb1a, type: 3}
+      propertyPath: alpha
+      value: 
+      objectReference: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
     - target: {fileID: 1210650440, guid: 2ee4714015c8ab9418216bee6c68bb1a, type: 3}
       propertyPath: questList.Array.size
       value: 0
@@ -12031,7 +11940,7 @@ PrefabInstance:
     - target: {fileID: 4387758896619048477, guid: 2ee4714015c8ab9418216bee6c68bb1a,
         type: 3}
       propertyPath: characterClass
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee4714015c8ab9418216bee6c68bb1a, type: 3}

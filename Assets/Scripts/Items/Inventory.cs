@@ -12,4 +12,9 @@ public class Inventory : MonoBehaviour
 		inventory.Capacity = 16;
 	}
 
+	void QuestItemCheck()
+	{
+
+	}
+
 }

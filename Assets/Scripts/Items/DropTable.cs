@@ -23,7 +23,7 @@ public class DropTable : MonoBehaviour
 		
 	}
 
-	public void CalculateLoot()
+	public void CalculateLoot(GameObject looter)
 	{
 		for (int i = 0; i < droppedItems.Count; i++)
 		{
@@ -39,11 +39,28 @@ public class DropTable : MonoBehaviour
 
 		foreach (LootTable loot in dropList)
 		{
+			if (loot.itemList.type == Items.itemType.Quest)
+			{
+				for (int i = 0; i < looter.GetComponent<Player>().questBook.questList.Count; i++)
+				{
+					if (looter.GetComponent<Player>().questBook.questList[i].questID == loot.itemList.questItemID)
+					{
+						int lootDice = Random.Range(0, 100);
+						if (lootDice <= loot.dropChance)
+						{
+							droppedItems.Add(loot.itemList);
+						}
+					}
+				}
+			}
+			else
+			{
 				int lootDice = Random.Range(0, 100);
 				if (lootDice <= loot.dropChance)
 				{
 					droppedItems.Add(loot.itemList);
 				}
+			}
 		}
 	}
 

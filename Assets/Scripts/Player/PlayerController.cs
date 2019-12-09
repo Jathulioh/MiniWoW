@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
 
 	public void AcceptQuestFrame()
 	{
+		Debug.Log("WHY");
 		player.questFrame.ClearAvailable();
 		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
 		{
