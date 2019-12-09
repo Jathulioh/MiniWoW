@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class EquipmentScreen : MonoBehaviour
+public class CharacterAppearance : MonoBehaviour
 {
 	public GameObject renderTextureCam;
 
@@ -83,12 +83,15 @@ public class EquipmentScreen : MonoBehaviour
 
 
 	public Texture2D characterTexture;
+	public RenderTexture renderTexture;
+	public Material mat;
+	bool thing;
 
 	// Start is called before the first frame update
 	void Start()
     {
 		ClothingLayers();
-    }
+	}
 
     // Update is called once per frame
     void Update()
@@ -97,10 +100,26 @@ public class EquipmentScreen : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.H))
 		{
-
+			CreateTexture();
+			mat.SetTexture("_BaseColorMap", characterTexture);
 		}
 
     }
+
+	void CreateTexture()
+	{
+		Debug.Log("Generating");
+		characterTexture = new Texture2D(1024, 512, TextureFormat.RGB24, false, true);
+
+		Rect rectReadPixels = new Rect(0, 0, 1024, 512);
+
+		RenderTexture.active = renderTexture;
+
+		characterTexture.ReadPixels(rectReadPixels, 0, 0);
+		characterTexture.Apply();
+
+		RenderTexture.active = null;
+	}
 
 	void ClothingLayers()
 	{

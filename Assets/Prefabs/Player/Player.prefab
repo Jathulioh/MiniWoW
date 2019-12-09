@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  completedQuestList: 
 --- !u!1 &4387758896619048473
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +173,7 @@ MonoBehaviour:
   jumpSpeed: 7
   gravity: 20
   animController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &4387758896619048477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Jathulioh
   level: 255
+  experience: 0
+  experienceTotal: 0
   healthPoints: 100
   currentHealthPoints: 0
   attackPower: 0
@@ -194,6 +198,7 @@ MonoBehaviour:
   allignment: 0
   currentTarget: {fileID: 0}
   targetOf: {fileID: 0}
+  attackable: 0
   attacking: 0
   beingAttacked: 0
   isDead: 0
@@ -209,6 +214,14 @@ MonoBehaviour:
   versatility: 0
   bonusArmour: 0
   spirit: 0
+  QuestGiver: 0
+  questGiverAttachment: {fileID: 0}
+  currentTalkToMe: {fileID: 0}
+  quests: []
+  questHandIns: []
+  talktome: {fileID: 0}
+  talktomeQuestionGray: {fileID: 0}
+  talktomeQuestion: {fileID: 0}
   characterRace: 0
   characterClass: 0
   characterGender: 0
@@ -217,6 +230,7 @@ MonoBehaviour:
   questBook: {fileID: 0}
   inventory: {fileID: 0}
   lootFrame: {fileID: 0}
+  questFrame: {fileID: 0}
 --- !u!114 &8896077549204322048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,9 +269,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4387758896619048473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d92ad73566594a47a4831d77e9db909, type: 3}
+  m_Script: {fileID: 11500000, guid: 833202f0e5b77444989452f431b6c573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renderTextureCam: {fileID: 0}
+  skin: {fileID: 0}
+  face: {fileID: 0}
+  faceHair: {fileID: 0}
+  scalp: {fileID: 0}
   head: {fileID: 0}
   neck: {fileID: 0}
   shoulder: {fileID: 0}
@@ -276,7 +295,7 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   mainhand: {fileID: 0}
   offhand: {fileID: 0}
-  alpha: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+  alpha: {fileID: 0}
   baseLayer: {fileID: 0}
   faceLayer: {fileID: 0}
   facialHairLayer: {fileID: 0}
@@ -299,6 +318,7 @@ MonoBehaviour:
   legLowerLayer: {fileID: 0}
   legBootLayer: {fileID: 0}
   legFootLayer: {fileID: 0}
+  characterTexture: {fileID: 0}
 --- !u!1 &4387758897836407859
 GameObject:
   m_ObjectHideFlags: 0
