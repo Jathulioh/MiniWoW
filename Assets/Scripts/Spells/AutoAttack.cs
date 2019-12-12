@@ -34,6 +34,8 @@ public class AutoAttack : Spell
 	{
 		if (ToggleOn == true)
 		{
+			if (entity.currentTarget.gameObject.GetComponent<Entity>().isDead)
+				TurnOff();
 			if (RangeCheck())
 			{
 				entity.attacking = true;
@@ -57,8 +59,11 @@ public class AutoAttack : Spell
 		{
 			if (counter <= 0)
 			{
-				//player.playerController.WeaponAttack(true);
+				if (entity.gameObject.GetComponent<Player>())
+					entity.gameObject.GetComponent<PlayerController>().animController.SetTrigger("Attack");
 				SchoolDamage((entity.level * 3) + (entity.GetAttackPower() / 14));
+				if(entity.gameObject.GetComponent<Mob>())
+					entity.gameObject.GetComponent<Mob>().animationController.SetTrigger("Attack");
 				counter = entity.GetAttackSpeed();
 			}
 			else

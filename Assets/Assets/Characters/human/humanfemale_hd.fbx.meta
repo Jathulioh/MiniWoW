@@ -490,7 +490,367 @@ ModelImporter:
     4300000: character/human/female/humanfemale_hd
     9500000: //RootNode
     13700000: character/human/female/humanfemale_hd
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_0
+    second: {fileID: 2100000, guid: d9f3484964678544cb37406a37219788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_1
+    second: {fileID: 2100000, guid: e9bd2fe94fbc5274f813a6f6f7f5aed2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_10
+    second: {fileID: 2100000, guid: e76cf0fbfae279c408cc42bb0ef393bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_11
+    second: {fileID: 2100000, guid: aa51a20912716e541932e37d9cfbdb9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_12
+    second: {fileID: 2100000, guid: 60b81adb26326644f856eb5974b4c13c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_13
+    second: {fileID: 2100000, guid: e0dd2e0269c0c134e9f9aa8207649092, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_14
+    second: {fileID: 2100000, guid: 11edb1a3df99fc145a2b29cb78d57b60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_15
+    second: {fileID: 2100000, guid: 4fec5c86ea9dbff4e995b01af27d8eec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_16
+    second: {fileID: 2100000, guid: 4287541479920a0429d1f4beed27d20b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_17
+    second: {fileID: 2100000, guid: b3576e3057206794fb34320b3f972e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_18
+    second: {fileID: 2100000, guid: 3bed16cf36bbff443a9014aecc1e7ec3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_2
+    second: {fileID: 2100000, guid: 68e64f6ac620e1d46afe1e2874ba72d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_20
+    second: {fileID: 2100000, guid: f5b14f0a92cf6d0469cda8acd384198f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_21
+    second: {fileID: 2100000, guid: 3ae47654af4f61b4cbdd128b3be463a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_22
+    second: {fileID: 2100000, guid: 3fd85a4d88ffeb44a989ea72ec2bfcde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_23
+    second: {fileID: 2100000, guid: 1950cfc620b3fe346947316f45c3e613, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_24
+    second: {fileID: 2100000, guid: dc3f9ec0ff7463e478cf61062a5ecbf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_25
+    second: {fileID: 2100000, guid: 5a3f4e0f84d932943a7bc362cb16c563, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_26
+    second: {fileID: 2100000, guid: 92cd660e0bafdf44f9dfad0609dcd3c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_27
+    second: {fileID: 2100000, guid: d494809c881d0ec448cd4340452aea41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_28
+    second: {fileID: 2100000, guid: 6b61044305693fc40b3016c3299a18d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_29
+    second: {fileID: 2100000, guid: cb7f2b23bb399934b879709940ea596d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_3
+    second: {fileID: 2100000, guid: 224cd14c4234b3d4aa871d766989a631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_30
+    second: {fileID: 2100000, guid: 703edffdc66d1c54dba8f638f06c2510, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_32
+    second: {fileID: 2100000, guid: 7ee8fde452e8e4d48ab512e382f0579d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_33
+    second: {fileID: 2100000, guid: 736f88c2a8b212c49a0b3b27998400d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_34
+    second: {fileID: 2100000, guid: 1bcbc09afbd03f542aaa7302ff1591e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_35
+    second: {fileID: 2100000, guid: 7b1daaa291c5477438d3ea240a9a2a2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_36
+    second: {fileID: 2100000, guid: 8039965a49924b94594c25dde63170c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_37
+    second: {fileID: 2100000, guid: 9ec736625f130024786b7a2c86ba0eb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_38
+    second: {fileID: 2100000, guid: 41244579b74af7047bb0a64f0fcd76ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_39
+    second: {fileID: 2100000, guid: 4825476c78049c242a2f938ac7463e47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_4
+    second: {fileID: 2100000, guid: b0ed51f66129fa64a8315141e79d12ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_40
+    second: {fileID: 2100000, guid: 1136b5702ff06124d87ffd781c3fe5a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_41
+    second: {fileID: 2100000, guid: c528cbf0693894d43aba1807a71b75f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_42
+    second: {fileID: 2100000, guid: 2950a38edde2aee44b3a7306a84e00bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_43
+    second: {fileID: 2100000, guid: a74323c64528fdd46812c0c03c28d2e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_44
+    second: {fileID: 2100000, guid: e1c88ca56d55dca4e9f4ae447f576bc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_45
+    second: {fileID: 2100000, guid: 364773010c93f274da2b74d81720d68a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_46
+    second: {fileID: 2100000, guid: e89e60dee9401394797750b144298e20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_47
+    second: {fileID: 2100000, guid: 950c38247e099a04ab838a716f4a7b09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_48
+    second: {fileID: 2100000, guid: 3ff98c4f2cd349845b760f82e3b3372c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_49
+    second: {fileID: 2100000, guid: 3818bf0869f4a6d4581c6add20d1f8ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_5
+    second: {fileID: 2100000, guid: 2f743bc073346d6459b15a6305b2467f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_50
+    second: {fileID: 2100000, guid: 89a41f356b1122c4fafc13b7598aadc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_51
+    second: {fileID: 2100000, guid: d90ce6d66234c8e4ea556483c67ec6e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_52
+    second: {fileID: 2100000, guid: 2e206ff15e9d990449cd4ff108ca4650, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_53
+    second: {fileID: 2100000, guid: 5e5e8ca11dc1b79499c2922b64a23c92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_54
+    second: {fileID: 2100000, guid: 855c702c90fdb3e4da237579491bf295, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_55
+    second: {fileID: 2100000, guid: 30907dfeae68d814a94475431aa4220f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_56
+    second: {fileID: 2100000, guid: f19a840d1396b7047a446b194e8b8096, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_57
+    second: {fileID: 2100000, guid: 38c5908107d59fa4d8c16ba39e8ddbf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_58
+    second: {fileID: 2100000, guid: ac05ca07c59ffe044b6a2f3175d8d81b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_59
+    second: {fileID: 2100000, guid: b0c4392d7dac9fa45aafab253c8dbb4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_6
+    second: {fileID: 2100000, guid: f89ac7b5bf94c3146ae38456c98a7355, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_60
+    second: {fileID: 2100000, guid: 5d4307e1102104445b5348dd92bf550f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_61
+    second: {fileID: 2100000, guid: effdc51dac6bebd4fbd0d8ac8758b0f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_62
+    second: {fileID: 2100000, guid: 66bfd75056bc2764f8876493421fc763, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_63
+    second: {fileID: 2100000, guid: 129a49b3eb5faa647b95a4facc136069, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_64
+    second: {fileID: 2100000, guid: db140dd91b555bd46bbff68175492da0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_65
+    second: {fileID: 2100000, guid: 13c6fe00cf9fdb640bb70b47eb07a497, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_66
+    second: {fileID: 2100000, guid: 078a667dd8aff424ba3ce08a9bef8b63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_67
+    second: {fileID: 2100000, guid: b3621a17ee7c55148b5fc2f03a6b793e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_68
+    second: {fileID: 2100000, guid: 00ee958934a946140b4498ca729bb4b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_69
+    second: {fileID: 2100000, guid: e02f122da65c85c4ca3ebe45d59cca5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_7
+    second: {fileID: 2100000, guid: b84439904b3d1d24b87364f800dcd84b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_70
+    second: {fileID: 2100000, guid: b13bbbc26f783a447bd8f76396e73d0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_71
+    second: {fileID: 2100000, guid: 2df1b836f611a2e45bd752c168b49c84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_72
+    second: {fileID: 2100000, guid: bfe131637b04c3d4283959bbb6ad3b16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_73
+    second: {fileID: 2100000, guid: cc0b3fb84c9a77444b973c3b5c385124, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_8
+    second: {fileID: 2100000, guid: e26bcfe78aa5d644cb8e7fbd57715df2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: character_human_female_humanfemale_hd_9
+    second: {fileID: 2100000, guid: e79da7bd683c8174b9b935d75fc260b2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -542,7 +902,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 0.02
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

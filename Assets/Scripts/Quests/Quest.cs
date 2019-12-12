@@ -9,6 +9,7 @@ public class QuestObjectives
 	public int numberOf;
 	public int numberDone;
 	public int creatureGroupID;
+	public string creatureNames;
 	public bool completed;
 }
 

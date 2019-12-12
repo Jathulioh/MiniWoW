@@ -21,18 +21,22 @@ public class Mob : Entity
 	public strengthClass rarity;
 	public float aggroRadius;
 	public float respawnTimer;
+	private float respawnCountdown;
+
+	public bool isMoving;
 
 	private void Start()
 	{
 		agent = gameObject.GetComponent<NavMeshAgent>();
 		spellBook = gameObject.GetComponentInChildren<Spellbook>();
 		dropTable = gameObject.GetComponent<DropTable>();
+		animationController = gameObject.GetComponentInChildren<Animator>();
 	}
 
 	private void Update()
 	{
-
-		
+		animationController.SetBool("isMoving", isMoving);
+		animationController.SetBool("isDead", isDead);
 
 		if (BeingAttacked() && !isDead)
 		{
@@ -48,6 +52,11 @@ public class Mob : Entity
 		{
 			agent.stoppingDistance = minDistance;
 			agent.SetDestination(target);
+			isMoving = true;
+		}
+		if (agent.remainingDistance < minDistance)
+		{
+			isMoving = false;
 		}
 	}
 
@@ -96,11 +105,20 @@ public class Mob : Entity
 			isDead = true;
 			attackable = false;
 			attacking = false;
+			currentTarget = null;
+			foreach (GameObject spell in spellBook.spells)
+			{
+				if (spell.name == "AutoAttack")
+				{
+					spell.GetComponent<AutoAttack>().TurnOff();
+				}
+			}
 			dropTable.CalculateLoot(targetOf);
 			if (targetOf.GetComponent<Player>().attacking && targetOf.GetComponent<Player>().currentTarget == this.gameObject)
 			{
 				targetOf.GetComponent<Player>().UpdateQuestList();
 			}
+			respawnCountdown = respawnTimer;
 		}
 	}
 

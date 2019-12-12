@@ -15,7 +15,5 @@ public struct appearances{
 
 public class CharacterCustomization : MonoBehaviour
 {
-
 	public appearances[] appearance;
-
 }

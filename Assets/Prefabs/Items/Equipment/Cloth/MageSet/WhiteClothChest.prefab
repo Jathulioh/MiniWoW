@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1477771779278693017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1477771779278693023}
+  - component: {fileID: 1477771779278693016}
+  m_Layer: 0
+  m_Name: WhiteClothChest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1477771779278693023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477771779278693017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62.20956, y: 0.39792728, z: 81.153404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1477771779278693016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477771779278693017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074c13d59525fa143bbffa79d139a694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - affectedLayer: 10
+    layerImageMale: {fileID: 2800000, guid: 039856caa1be36d479765715a0d6c17c, type: 3}
+    layerImageFemale: {fileID: 2800000, guid: 9a2001427e4a1eb4cb810476e2b5f27b, type: 3}
+  - affectedLayer: 11
+    layerImageMale: {fileID: 2800000, guid: 045151c93f503fa4c951eb63f6a199a3, type: 3}
+    layerImageFemale: {fileID: 2800000, guid: c2d59f5df60919a40b9870a829813008, type: 3}
+  - affectedLayer: 12
+    layerImageMale: {fileID: 2800000, guid: 1c89588ed68d23a46b101bd16e17d8f6, type: 3}
+    layerImageFemale: {fileID: 2800000, guid: 1c89588ed68d23a46b101bd16e17d8f6, type: 3}
+  - affectedLayer: 13
+    layerImageMale: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}
+    layerImageFemale: {fileID: 2800000, guid: 45bb2aaf9183f0f43ae1592e05587a39, type: 3}

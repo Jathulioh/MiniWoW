@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 	private Vector3 moveDirection;
 	private float yaw;
 	private float rotationSensitivity = 2;
+	private bool isMoving = false;
 
 	private void Awake()
 	{
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
     {
 		moveSpeed = runSpeed;
-		//animController.SetBool("isMoving", false);
+		
     }
 
     // Update is called once per frame
@@ -66,7 +67,12 @@ public class PlayerController : MonoBehaviour
 				Cursor.lockState = CursorLockMode.Confined;
 				moveDirection = new Vector3(0.0f, 0.0f, 1.0f);
 			}
-			moveDirection.x = Input.GetAxisRaw("Strafe");
+			//moveDirection.x = Input.GetAxisRaw("Strafe");
+
+			if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+				isMoving = true;
+			else
+				isMoving = false;
 
 			moveDirection = moveDirection.normalized;
 			moveDirection *= moveSpeed;
@@ -182,7 +188,6 @@ public class PlayerController : MonoBehaviour
 
 	public void AcceptQuestFrame()
 	{
-		Debug.Log("WHY");
 		player.questFrame.ClearAvailable();
 		for (int i = 0; i < player.currentTarget.GetComponent<Entity>().quests.Count; i++)
 		{
@@ -282,14 +287,8 @@ public class PlayerController : MonoBehaviour
 
 	void AnimationSettings()
 	{
-		if (player.attacking)
-		{
-			//animController.SetBool("inCombat", true);
-		}
-		else
-		{
-			//animController.SetBool("inCombat", false);
-		}
+		animController.SetBool("isMoving", isMoving);
+		animController.SetBool("Attacking", player.attacking);
 	}
 
 	public void WeaponAttack(bool attack)

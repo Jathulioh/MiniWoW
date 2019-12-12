@@ -20,19 +20,29 @@ public class Player : Entity
 	[HideInInspector] public Inventory inventory;
 	[HideInInspector] public LootFrame lootFrame;
 	[HideInInspector] public AcceptQuest questFrame;
+	[HideInInspector] public GameMenu gameMenu;
+	private bool gameMenuActive = false;
 
 	private void Awake()
 	{
 		playerController = this.gameObject.GetComponent<PlayerController>();
-		spellBook = gameObject.GetComponentInChildren<Spellbook>();
-		questBook = gameObject.GetComponentInChildren<QuestBook>();
-		inventory = gameObject.GetComponent<Inventory>();
-		lootFrame = GameObject.FindGameObjectWithTag("LootFrame").GetComponent<LootFrame>();
-		questFrame = GameObject.FindGameObjectWithTag("QuestFrame").GetComponent<AcceptQuest>();
+		if (playerController.enabled)
+		{
+			spellBook = gameObject.GetComponentInChildren<Spellbook>();
+			questBook = gameObject.GetComponentInChildren<QuestBook>();
+			inventory = gameObject.GetComponent<Inventory>();
+			lootFrame = GameObject.FindGameObjectWithTag("LootFrame").GetComponent<LootFrame>();
+			questFrame = GameObject.FindGameObjectWithTag("QuestFrame").GetComponent<AcceptQuest>();
+			gameMenu = GameObject.FindGameObjectWithTag("GameMenu").GetComponent<GameMenu>();
+			gameMenu.gameObject.SetActive(false);
+
+		}
 	}
 
 	private void Update()
 	{
+		if (Input.GetButtonUp("Cancel"))
+			OpenGameMenu();
 		Targeting();
 	}
 	void Targeting()
@@ -65,7 +75,24 @@ public class Player : Entity
 		}
 	}
 
+	public void OpenGameMenu()
+	{
+		
+			if (gameMenuActive == false)
+			{
+				if (currentTarget == null)
+				{
+					gameMenuActive = true;
+					gameMenu.gameObject.SetActive(true);
+				}
+			}
+			else
+			{
+				gameMenuActive = false;
+				gameMenu.gameObject.SetActive(false);
+			}
 
+	}
 
 	public void UpdateQuestList()
 	{

@@ -97,13 +97,6 @@ public class CharacterAppearance : MonoBehaviour
     void Update()
     {
 		ClothingLayers();
-
-		if (Input.GetKeyDown(KeyCode.H))
-		{
-			CreateTexture();
-			mat.SetTexture("_BaseColorMap", characterTexture);
-		}
-
     }
 
 	void CreateTexture()
@@ -128,6 +121,16 @@ public class CharacterAppearance : MonoBehaviour
 			CheckLayers(chest);
 			currentChest = chest;
 		}
+		if (wrist != currentWrist)
+		{
+			CheckLayers(wrist);
+			currentWrist = wrist;
+		}
+		if (hands != currentHands)
+		{
+			CheckLayers(hands);
+			currentHands = hands;
+		}
 		if (legs != currentLegs)
 		{
 			CheckLayers(legs);
@@ -142,53 +145,86 @@ public class CharacterAppearance : MonoBehaviour
 
 	void CheckLayers(Equipment item)
 	{
-		for (int  i = 0;  i < item.layers.Length;  i++)
+		for (int i = 0; i < item.layers.Length; i++)
 		{
-			if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoLowerLayer)
+			if (item == chest)
 			{
-				torsoLowerLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoLowerLayer)
+				{
+					torsoLowerLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { torsoLowerLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoUpperLayer)
+				{
+					torsoUpperLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { torsoUpperLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveLowerLayer)
+				{
+					sleeveLowerLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveLowerLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveUpperLayer)
+				{
+					sleeveUpperLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
 			}
-			//else { torsoLowerLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.torsoUpperLayer)
+			if (item == wrist)
 			{
-				torsoUpperLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.bracerLayer)
+				{
+					bracerLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
 			}
-			//else { torsoUpperLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveLowerLayer)
+			if (item == hands)
 			{
-				sleeveLowerLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.wristLayer)
+				{
+					wristLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.gloveLayer)
+				{
+					gloveLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
 			}
-			//else { sleeveLowerLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.sleeveUpperLayer)
+			if (item == legs)
 			{
-				sleeveUpperLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.legLowerLayer)
+				{
+					legLowerLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { torsoLowerLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legUpperLayer)
+				{
+					legUpperLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { torsoUpperLayer.texture = alpha; }
 			}
-			//else { sleeveUpperLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legLowerLayer)
+			if (item == waist)
 			{
-				legLowerLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBeltLayer)
+					{
+						legBeltLayer.texture = item.layers[i].layerImageMale;
+					}
+					//else { sleeveLowerLayer.texture = alpha; }
 			}
-			//else { torsoLowerLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legUpperLayer)
+			if (item == feet)
 			{
-				legUpperLayer.texture = item.layers[i].layerImageMale;
+				if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBootLayer)
+				{
+					legBootLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
+				else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legFootLayer)
+				{
+					legFootLayer.texture = item.layers[i].layerImageMale;
+				}
+				//else { sleeveUpperLayer.texture = alpha; }
 			}
-			//else { torsoUpperLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBeltLayer)
-			{
-				legBeltLayer.texture = item.layers[i].layerImageMale;
-			}
-			//else { sleeveLowerLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legBootLayer)
-			{
-				legBootLayer.texture = item.layers[i].layerImageMale;
-			}
-			//else { sleeveUpperLayer.texture = alpha; }
-			else if (item.layers[i].affectedLayer == EquipmentLayers.layer.legFootLayer)
-			{
-				legFootLayer.texture = item.layers[i].layerImageMale;
-			}
-			//else { sleeveUpperLayer.texture = alpha; }
 		}
 	}
 			 

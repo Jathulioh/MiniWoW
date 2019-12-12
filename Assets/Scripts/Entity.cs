@@ -60,6 +60,8 @@ public class Entity : MonoBehaviour
 	public GameObject talktomeQuestionGray;
 	public GameObject talktomeQuestion;
 
+	public Animator animationController;
+
 	void Start()
 	{
 		BaseHealth();

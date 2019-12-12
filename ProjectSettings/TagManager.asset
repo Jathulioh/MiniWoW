@@ -9,6 +9,7 @@ TagManager:
   - Mob
   - LootFrame
   - QuestFrame
+  - GameMenu
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - PostProcessing
   - Clothing
-  - 
-  - 
+  - Minimap
+  - Terrain
   - 
   - 
   - 

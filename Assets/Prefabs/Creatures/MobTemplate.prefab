@@ -109,14 +109,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entityName: Kobold
   level: 2
-  healthPoints: 300
-  currentHealthPoints: 300
-  attackPower: 15
+  experience: 0
+  experienceTotal: 0
+  healthPoints: 50
+  currentHealthPoints: 50
+  attackPower: 5
   attackSpeed: 2
   spellPower: 0
   allignment: 2
   currentTarget: {fileID: 0}
   targetOf: {fileID: 0}
+  attackable: 1
   attacking: 0
   beingAttacked: 0
   isDead: 0
@@ -132,12 +135,23 @@ MonoBehaviour:
   versatility: 0
   bonusArmour: 0
   spirit: 0
+  QuestGiver: 0
+  questGiverAttachment: {fileID: 0}
+  currentTalkToMe: {fileID: 0}
+  quests: []
+  questHandIns: []
+  talktome: {fileID: 0}
+  talktomeQuestionGray: {fileID: 0}
+  talktomeQuestion: {fileID: 0}
+  animationController: {fileID: 0}
   agent: {fileID: 0}
   reactHorde: 0
   reactAlliance: 0
   groupID: 0
   rarity: 0
   aggroRadius: 0
+  respawnTimer: 0
+  isMoving: 0
 --- !u!195 &6534800945319613185
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -179,6 +193,7 @@ MonoBehaviour:
   - itemList: {fileID: 7879859609375007964, guid: b74c4e0ec7e9c984ea7796da6a007fb8,
       type: 3}
     dropChance: 50
+  droppedItems: []
 --- !u!1001 &6534800944646899229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -316,11 +331,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6005444841788402969, guid: 4471d96fad685ff44bff62cf5add3290,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4471d96fad685ff44bff62cf5add3290, type: 3}
