@@ -22,6 +22,7 @@ public class Mob : Entity
 	public float aggroRadius;
 	public float respawnTimer;
 	private float respawnCountdown;
+	public int experienceDrop;
 
 	public bool isMoving;
 
@@ -117,6 +118,7 @@ public class Mob : Entity
 			if (targetOf.GetComponent<Player>().attacking && targetOf.GetComponent<Player>().currentTarget == this.gameObject)
 			{
 				targetOf.GetComponent<Player>().UpdateQuestList();
+				targetOf.GetComponent<Player>().AddExperience(experienceDrop);
 			}
 			respawnCountdown = respawnTimer;
 		}

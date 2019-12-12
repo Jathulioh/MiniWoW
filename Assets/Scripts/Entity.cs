@@ -147,7 +147,7 @@ public class Entity : MonoBehaviour
 	}
 	public void LevelUp()
 	{
-		while (experience > experienceTotal)
+		while (experience >= experienceTotal)
 		{
 			level++;
 			experience -= experienceTotal;

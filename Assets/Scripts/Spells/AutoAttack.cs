@@ -6,6 +6,7 @@ public class AutoAttack : Spell
 {
 
 	float counter;
+	[Header("Custom Fields")]
 	[SerializeField]
 	bool ToggleOn;
 
